@@ -1,0 +1,1671 @@
+STAR version=2.7.9a
+STAR compilation time,server,dir=2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+##### Command Line:
+STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --genomeFastaFiles /proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked
+##### Initial USER parameters from Command Line:
+###### All USER parameters from Command Line:
+runThreadN                    8     ~RE-DEFINED
+runMode                       genomeGenerate        ~RE-DEFINED
+genomeDir                     /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping     ~RE-DEFINED
+genomeFastaFiles              /proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked        ~RE-DEFINED
+##### Finished reading parameters from all sources
+
+##### Final user re-defined parameters-----------------:
+runMode                           genomeGenerate   
+runThreadN                        8
+genomeDir                         /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping
+genomeFastaFiles                  /proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked   
+
+-------------------------------
+##### Final effective command line:
+STAR   --runMode genomeGenerate      --runThreadN 8   --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping   --genomeFastaFiles /proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked   
+----------------------------------------
+
+Number of fastq files for each mate = 1
+ParametersSolo: --soloCellFilterType CellRanger2.2 filtering parameters:  3000 0.99 10
+Finished loading and checking parameters
+--genomeDir directory exists and will be overwritten: /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/
+!!!!! WARNING: Could not move Log.out file from ./Log.out into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/Log.out. Will keep ./Log.out
+
+May 11 22:13:06 ... starting to generate Genome files
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 0  "tig00000002_pilon" chrStart: 0
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 1  "tig00000006_pilon" chrStart: 262144
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 2  "tig00000009_pilon" chrStart: 524288
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 3  "tig00000011_pilon" chrStart: 786432
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 4  "tig00000013_pilon" chrStart: 1048576
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 5  "tig00000016_pilon" chrStart: 1310720
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 6  "tig00000017_pilon" chrStart: 1572864
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 7  "tig00000018_pilon" chrStart: 1835008
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 8  "tig00000020_pilon" chrStart: 2097152
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 9  "tig00000022_pilon" chrStart: 2359296
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 10  "tig00000023_pilon" chrStart: 2621440
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 11  "tig00000024_pilon" chrStart: 2883584
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 12  "tig00000025_pilon" chrStart: 3145728
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 13  "tig00000028_pilon" chrStart: 3407872
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 14  "tig00000029_pilon" chrStart: 3670016
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 15  "tig00000031_pilon" chrStart: 3932160
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 16  "tig00000033_pilon" chrStart: 4194304
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 17  "tig00000035_pilon" chrStart: 4456448
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 18  "tig00000036_pilon" chrStart: 4718592
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 19  "tig00000037_pilon" chrStart: 4980736
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 20  "tig00000038_pilon" chrStart: 5242880
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 21  "tig00000039_pilon" chrStart: 5505024
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 22  "tig00000042_pilon" chrStart: 5767168
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 23  "tig00000043_pilon" chrStart: 6029312
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 24  "tig00000045_pilon" chrStart: 6291456
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 25  "tig00000046_pilon" chrStart: 6553600
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 26  "tig00000047_pilon" chrStart: 6815744
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 27  "tig00000048_pilon" chrStart: 7077888
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 28  "tig00000049_pilon" chrStart: 7340032
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 29  "tig00000050_pilon" chrStart: 7602176
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 30  "tig00000051_pilon" chrStart: 7864320
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 31  "tig00000052_pilon" chrStart: 8126464
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 32  "tig00000054_pilon" chrStart: 8388608
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 33  "tig00000055_pilon" chrStart: 8650752
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 34  "tig00000056_pilon" chrStart: 8912896
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 35  "tig00000057_pilon" chrStart: 9175040
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 36  "tig00000058_pilon" chrStart: 9437184
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 37  "tig00000059_pilon" chrStart: 9699328
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 38  "tig00000060_pilon" chrStart: 9961472
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 39  "tig00000062_pilon" chrStart: 10223616
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 40  "tig00000063_pilon" chrStart: 10485760
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 41  "tig00000065_pilon" chrStart: 10747904
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 42  "tig00000066_pilon" chrStart: 11010048
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 43  "tig00000067_pilon" chrStart: 11272192
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 44  "tig00000068_pilon" chrStart: 11534336
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 45  "tig00000069_pilon" chrStart: 11796480
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 46  "tig00000070_pilon" chrStart: 12058624
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 47  "tig00000071_pilon" chrStart: 12320768
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 48  "tig00000072_pilon" chrStart: 12582912
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 49  "tig00000074_pilon" chrStart: 12845056
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 50  "tig00000075_pilon" chrStart: 13107200
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 51  "tig00000076_pilon" chrStart: 13369344
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 52  "tig00000078_pilon" chrStart: 13631488
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 53  "tig00000079_pilon" chrStart: 13893632
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 54  "tig00000081_pilon" chrStart: 14155776
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 55  "tig00000082_pilon" chrStart: 14417920
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 56  "tig00000083_pilon" chrStart: 14680064
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 57  "tig00000085_pilon" chrStart: 14942208
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 58  "tig00000087_pilon" chrStart: 15204352
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 59  "tig00000089_pilon" chrStart: 15466496
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 60  "tig00000090_pilon" chrStart: 15990784
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 61  "tig00000091_pilon" chrStart: 16252928
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 62  "tig00000094_pilon" chrStart: 16515072
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 63  "tig00000095_pilon" chrStart: 16777216
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 64  "tig00000097_pilon" chrStart: 17563648
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 65  "tig00000098_pilon" chrStart: 17825792
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 66  "tig00000100_pilon" chrStart: 18087936
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 67  "tig00000102_pilon" chrStart: 18350080
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 68  "tig00000103_pilon" chrStart: 18612224
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 69  "tig00000104_pilon" chrStart: 18874368
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 70  "tig00000106_pilon" chrStart: 19136512
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 71  "tig00000108_pilon" chrStart: 19398656
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 72  "tig00000110_pilon" chrStart: 19660800
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 73  "tig00000111_pilon" chrStart: 19922944
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 74  "tig00000115_pilon" chrStart: 20185088
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 75  "tig00000116_pilon" chrStart: 20447232
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 76  "tig00000117_pilon" chrStart: 20709376
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 77  "tig00000118_pilon" chrStart: 20971520
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 78  "tig00000119_pilon" chrStart: 21233664
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 79  "tig00000121_pilon" chrStart: 21495808
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 80  "tig00000122_pilon" chrStart: 21757952
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 81  "tig00000123_pilon" chrStart: 22020096
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 82  "tig00000124_pilon" chrStart: 22282240
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 83  "tig00000126_pilon" chrStart: 22544384
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 84  "tig00000127_pilon" chrStart: 22806528
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 85  "tig00000129_pilon" chrStart: 23330816
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 86  "tig00000130_pilon" chrStart: 23592960
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 87  "tig00000131_pilon" chrStart: 23855104
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 88  "tig00000132_pilon" chrStart: 24117248
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 89  "tig00000135_pilon" chrStart: 24379392
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 90  "tig00000137_pilon" chrStart: 24641536
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 91  "tig00000139_pilon" chrStart: 24903680
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 92  "tig00000141_pilon" chrStart: 25165824
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 93  "tig00000142_pilon" chrStart: 25427968
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 94  "tig00000144_pilon" chrStart: 25690112
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 95  "tig00000145_pilon" chrStart: 25952256
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 96  "tig00000147_pilon" chrStart: 26214400
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 97  "tig00000148_pilon" chrStart: 26476544
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 98  "tig00000149_pilon" chrStart: 26738688
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 99  "tig00000151_pilon" chrStart: 27000832
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 100  "tig00000152_pilon" chrStart: 27262976
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 101  "tig00000153_pilon" chrStart: 27787264
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 102  "tig00000155_pilon" chrStart: 28049408
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 103  "tig00000156_pilon" chrStart: 28311552
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 104  "tig00000157_pilon" chrStart: 28573696
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 105  "tig00000158_pilon" chrStart: 28835840
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 106  "tig00000159_pilon" chrStart: 29097984
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 107  "tig00000160_pilon" chrStart: 29360128
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 108  "tig00000161_pilon" chrStart: 29884416
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 109  "tig00000162_pilon" chrStart: 30146560
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 110  "tig00000163_pilon" chrStart: 30408704
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 111  "tig00000165_pilon" chrStart: 30670848
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 112  "tig00000167_pilon" chrStart: 30932992
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 113  "tig00000170_pilon" chrStart: 31195136
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 114  "tig00000171_pilon" chrStart: 31457280
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 115  "tig00000172_pilon" chrStart: 31981568
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 116  "tig00000173_pilon" chrStart: 32243712
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 117  "tig00000174_pilon" chrStart: 32505856
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 118  "tig00000175_pilon" chrStart: 32768000
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 119  "tig00000176_pilon" chrStart: 33030144
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 120  "tig00000178_pilon" chrStart: 33292288
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 121  "tig00000179_pilon" chrStart: 33554432
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 122  "tig00000181_pilon" chrStart: 33816576
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 123  "tig00000182_pilon" chrStart: 34078720
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 124  "tig00000184_pilon" chrStart: 34340864
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 125  "tig00000185_pilon" chrStart: 34865152
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 126  "tig00000187_pilon" chrStart: 35127296
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 127  "tig00000188_pilon" chrStart: 35389440
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 128  "tig00000190_pilon" chrStart: 35651584
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 129  "tig00000191_pilon" chrStart: 35913728
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 130  "tig00000192_pilon" chrStart: 36175872
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 131  "tig00000194_pilon" chrStart: 36438016
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 132  "tig00000195_pilon" chrStart: 36700160
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 133  "tig00000196_pilon" chrStart: 36962304
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 134  "tig00000197_pilon" chrStart: 37486592
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 135  "tig00000198_pilon" chrStart: 37748736
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 136  "tig00000199_pilon" chrStart: 38010880
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 137  "tig00000200_pilon" chrStart: 38273024
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 138  "tig00000202_pilon" chrStart: 38535168
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 139  "tig00000204_pilon" chrStart: 38797312
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 140  "tig00000206_pilon" chrStart: 39059456
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 141  "tig00000207_pilon" chrStart: 39321600
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 142  "tig00000208_pilon" chrStart: 39583744
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 143  "tig00000209_pilon" chrStart: 39845888
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 144  "tig00000210_pilon" chrStart: 40108032
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 145  "tig00000211_pilon" chrStart: 40370176
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 146  "tig00000212_pilon" chrStart: 40632320
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 147  "tig00000213_pilon" chrStart: 40894464
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 148  "tig00000215_pilon" chrStart: 41156608
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 149  "tig00000217_pilon" chrStart: 41418752
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 150  "tig00000218_pilon" chrStart: 41680896
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 151  "tig00000219_pilon" chrStart: 41943040
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 152  "tig00000220_pilon" chrStart: 42205184
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 153  "tig00000222_pilon" chrStart: 42467328
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 154  "tig00000223_pilon" chrStart: 42729472
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 155  "tig00000224_pilon" chrStart: 42991616
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 156  "tig00000226_pilon" chrStart: 43253760
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 157  "tig00000227_pilon" chrStart: 43515904
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 158  "tig00000228_pilon" chrStart: 43778048
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 159  "tig00000230_pilon" chrStart: 44040192
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 160  "tig00000231_pilon" chrStart: 44302336
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 161  "tig00000232_pilon" chrStart: 44564480
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 162  "tig00000235_pilon" chrStart: 44826624
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 163  "tig00000236_pilon" chrStart: 45088768
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 164  "tig00000237_pilon" chrStart: 45350912
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 165  "tig00000238_pilon" chrStart: 45613056
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 166  "tig00000239_pilon" chrStart: 45875200
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 167  "tig00000240_pilon" chrStart: 46137344
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 168  "tig00000241_pilon" chrStart: 46399488
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 169  "tig00000242_pilon" chrStart: 46661632
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 170  "tig00000243_pilon" chrStart: 46923776
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 171  "tig00000245_pilon" chrStart: 47185920
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 172  "tig00000246_pilon" chrStart: 47448064
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 173  "tig00000247_pilon" chrStart: 47710208
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 174  "tig00000249_pilon" chrStart: 47972352
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 175  "tig00000250_pilon" chrStart: 48234496
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 176  "tig00000251_pilon" chrStart: 48496640
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 177  "tig00000252_pilon" chrStart: 48758784
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 178  "tig00000253_pilon" chrStart: 49020928
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 179  "tig00000254_pilon" chrStart: 49283072
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 180  "tig00000255_pilon" chrStart: 49545216
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 181  "tig00000256_pilon" chrStart: 49807360
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 182  "tig00000257_pilon" chrStart: 50069504
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 183  "tig00000259_pilon" chrStart: 50331648
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 184  "tig00000261_pilon" chrStart: 50593792
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 185  "tig00000262_pilon" chrStart: 50855936
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 186  "tig00000263_pilon" chrStart: 51118080
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 187  "tig00000264_pilon" chrStart: 51380224
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 188  "tig00000265_pilon" chrStart: 51642368
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 189  "tig00000266_pilon" chrStart: 51904512
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 190  "tig00000267_pilon" chrStart: 52166656
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 191  "tig00000268_pilon" chrStart: 52428800
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 192  "tig00000269_pilon" chrStart: 52690944
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 193  "tig00000270_pilon" chrStart: 52953088
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 194  "tig00000271_pilon" chrStart: 53215232
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 195  "tig00000272_pilon" chrStart: 53477376
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 196  "tig00000273_pilon" chrStart: 53739520
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 197  "tig00000274_pilon" chrStart: 54001664
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 198  "tig00000275_pilon" chrStart: 54263808
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 199  "tig00000276_pilon" chrStart: 54525952
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 200  "tig00000277_pilon" chrStart: 54788096
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 201  "tig00000278_pilon" chrStart: 55050240
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 202  "tig00000279_pilon" chrStart: 55312384
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 203  "tig00000280_pilon" chrStart: 55574528
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 204  "tig00000281_pilon" chrStart: 55836672
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 205  "tig00000283_pilon" chrStart: 56098816
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 206  "tig00000284_pilon" chrStart: 56360960
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 207  "tig00000285_pilon" chrStart: 56623104
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 208  "tig00000286_pilon" chrStart: 56885248
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 209  "tig00000287_pilon" chrStart: 57147392
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 210  "tig00000288_pilon" chrStart: 57409536
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 211  "tig00000289_pilon" chrStart: 57671680
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 212  "tig00000290_pilon" chrStart: 57933824
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 213  "tig00000291_pilon" chrStart: 58195968
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 214  "tig00000292_pilon" chrStart: 58458112
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 215  "tig00000293_pilon" chrStart: 58720256
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 216  "tig00000294_pilon" chrStart: 58982400
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 217  "tig00000295_pilon" chrStart: 59244544
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 218  "tig00000296_pilon" chrStart: 59506688
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 219  "tig00000297_pilon" chrStart: 59768832
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 220  "tig00000298_pilon" chrStart: 60030976
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 221  "tig00000299_pilon" chrStart: 60293120
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 222  "tig00000300_pilon" chrStart: 60555264
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 223  "tig00000301_pilon" chrStart: 60817408
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 224  "tig00000302_pilon" chrStart: 61079552
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 225  "tig00000303_pilon" chrStart: 61341696
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 226  "tig00000304_pilon" chrStart: 61603840
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 227  "tig00000305_pilon" chrStart: 61865984
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 228  "tig00000306_pilon" chrStart: 62128128
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 229  "tig00000307_pilon" chrStart: 62390272
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 230  "tig00000308_pilon" chrStart: 62652416
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 231  "tig00000309_pilon" chrStart: 62914560
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 232  "tig00000310_pilon" chrStart: 63176704
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 233  "tig00000311_pilon" chrStart: 63438848
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 234  "tig00000312_pilon" chrStart: 63700992
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 235  "tig00000313_pilon" chrStart: 63963136
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 236  "tig00000314_pilon" chrStart: 64225280
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 237  "tig00000315_pilon" chrStart: 64487424
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 238  "tig00000316_pilon" chrStart: 64749568
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 239  "tig00000317_pilon" chrStart: 65011712
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 240  "tig00000318_pilon" chrStart: 65273856
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 241  "tig00000319_pilon" chrStart: 65536000
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 242  "tig00000320_pilon" chrStart: 65798144
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 243  "tig00000321_pilon" chrStart: 66060288
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 244  "tig00000322_pilon" chrStart: 66322432
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 245  "tig00000323_pilon" chrStart: 66584576
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 246  "tig00000324_pilon" chrStart: 66846720
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 247  "tig00000325_pilon" chrStart: 67108864
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 248  "tig00000326_pilon" chrStart: 67371008
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 249  "tig00000327_pilon" chrStart: 67633152
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 250  "tig00000328_pilon" chrStart: 67895296
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 251  "tig00000329_pilon" chrStart: 68157440
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 252  "tig00000330_pilon" chrStart: 68419584
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 253  "tig00000331_pilon" chrStart: 68681728
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 254  "tig00000332_pilon" chrStart: 68943872
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 255  "tig00000333_pilon" chrStart: 69206016
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 256  "tig00000334_pilon" chrStart: 69468160
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 257  "tig00000335_pilon" chrStart: 69730304
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 258  "tig00000336_pilon" chrStart: 69992448
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 259  "tig00000337_pilon" chrStart: 70254592
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 260  "tig00000338_pilon" chrStart: 70516736
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 261  "tig00000339_pilon" chrStart: 70778880
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 262  "tig00000340_pilon" chrStart: 71041024
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 263  "tig00000341_pilon" chrStart: 71303168
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 264  "tig00000342_pilon" chrStart: 71565312
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 265  "tig00000343_pilon" chrStart: 71827456
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 266  "tig00000344_pilon" chrStart: 72089600
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 267  "tig00000345_pilon" chrStart: 72351744
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 268  "tig00000346_pilon" chrStart: 72613888
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 269  "tig00000347_pilon" chrStart: 72876032
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 270  "tig00000348_pilon" chrStart: 73138176
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 271  "tig00000349_pilon" chrStart: 73400320
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 272  "tig00000350_pilon" chrStart: 73662464
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 273  "tig00000351_pilon" chrStart: 73924608
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 274  "tig00000352_pilon" chrStart: 74186752
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 275  "tig00000353_pilon" chrStart: 74448896
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 276  "tig00000354_pilon" chrStart: 74711040
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 277  "tig00000355_pilon" chrStart: 74973184
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 278  "tig00000356_pilon" chrStart: 75235328
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 279  "tig00000357_pilon" chrStart: 75497472
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 280  "tig00000358_pilon" chrStart: 75759616
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 281  "tig00000359_pilon" chrStart: 76021760
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 282  "tig00000360_pilon" chrStart: 76283904
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 283  "tig00000361_pilon" chrStart: 76546048
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 284  "tig00000362_pilon" chrStart: 76808192
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 285  "tig00000363_pilon" chrStart: 77070336
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 286  "tig00000364_pilon" chrStart: 77332480
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 287  "tig00000365_pilon" chrStart: 77594624
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 288  "tig00000366_pilon" chrStart: 77856768
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 289  "tig00000367_pilon" chrStart: 78118912
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 290  "tig00000368_pilon" chrStart: 78381056
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 291  "tig00000369_pilon" chrStart: 78643200
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 292  "tig00000370_pilon" chrStart: 78905344
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 293  "tig00000371_pilon" chrStart: 79167488
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 294  "tig00000372_pilon" chrStart: 79429632
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 295  "tig00000373_pilon" chrStart: 79691776
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 296  "tig00000374_pilon" chrStart: 79953920
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 297  "tig00000375_pilon" chrStart: 80216064
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 298  "tig00000376_pilon" chrStart: 80478208
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 299  "tig00000377_pilon" chrStart: 80740352
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 300  "tig00000378_pilon" chrStart: 81002496
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 301  "tig00000379_pilon" chrStart: 81264640
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 302  "tig00000380_pilon" chrStart: 81526784
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 303  "tig00000381_pilon" chrStart: 81788928
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 304  "tig00000382_pilon" chrStart: 82051072
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 305  "tig00000383_pilon" chrStart: 82313216
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 306  "tig00000384_pilon" chrStart: 82575360
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 307  "tig00000385_pilon" chrStart: 82837504
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 308  "tig00000386_pilon" chrStart: 83099648
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 309  "tig00000387_pilon" chrStart: 83361792
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 310  "tig00000388_pilon" chrStart: 83623936
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 311  "tig00000389_pilon" chrStart: 83886080
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 312  "tig00000390_pilon" chrStart: 84148224
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 313  "tig00000391_pilon" chrStart: 84410368
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 314  "tig00000392_pilon" chrStart: 84672512
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 315  "tig00000393_pilon" chrStart: 84934656
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 316  "tig00000394_pilon" chrStart: 85196800
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 317  "tig00000395_pilon" chrStart: 85458944
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 318  "tig00000396_pilon" chrStart: 85721088
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 319  "tig00000397_pilon" chrStart: 85983232
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 320  "tig00000398_pilon" chrStart: 86245376
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 321  "tig00000399_pilon" chrStart: 86507520
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 322  "tig00000400_pilon" chrStart: 86769664
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 323  "tig00000401_pilon" chrStart: 87031808
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 324  "tig00000402_pilon" chrStart: 87293952
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 325  "tig00000403_pilon" chrStart: 87556096
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 326  "tig00000404_pilon" chrStart: 87818240
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 327  "tig00000405_pilon" chrStart: 88080384
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 328  "tig00000406_pilon" chrStart: 88342528
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 329  "tig00000407_pilon" chrStart: 88604672
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 330  "tig00000408_pilon" chrStart: 88866816
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 331  "tig00000409_pilon" chrStart: 89128960
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 332  "tig00000410_pilon" chrStart: 89391104
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 333  "tig00000411_pilon" chrStart: 89653248
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 334  "tig00000412_pilon" chrStart: 89915392
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 335  "tig00000413_pilon" chrStart: 90177536
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 336  "tig00000414_pilon" chrStart: 90439680
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 337  "tig00000415_pilon" chrStart: 90701824
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 338  "tig00000416_pilon" chrStart: 90963968
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 339  "tig00000417_pilon" chrStart: 91226112
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 340  "tig00000418_pilon" chrStart: 91488256
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 341  "tig00000419_pilon" chrStart: 91750400
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 342  "tig00000420_pilon" chrStart: 92012544
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 343  "tig00000421_pilon" chrStart: 92274688
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 344  "tig00000422_pilon" chrStart: 92536832
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 345  "tig00000423_pilon" chrStart: 92798976
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 346  "tig00000424_pilon" chrStart: 93061120
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 347  "tig00000425_pilon" chrStart: 93323264
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 348  "tig00000426_pilon" chrStart: 93585408
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 349  "tig00000427_pilon" chrStart: 93847552
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 350  "tig00000428_pilon" chrStart: 94109696
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 351  "tig00000429_pilon" chrStart: 94371840
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 352  "tig00000430_pilon" chrStart: 94633984
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 353  "tig00000431_pilon" chrStart: 94896128
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 354  "tig00000432_pilon" chrStart: 95158272
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 355  "tig00000433_pilon" chrStart: 95420416
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 356  "tig00000434_pilon" chrStart: 95682560
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 357  "tig00000435_pilon" chrStart: 95944704
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 358  "tig00000436_pilon" chrStart: 96206848
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 359  "tig00000437_pilon" chrStart: 96468992
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 360  "tig00000438_pilon" chrStart: 96731136
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 361  "tig00000439_pilon" chrStart: 96993280
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 362  "tig00000440_pilon" chrStart: 97255424
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 363  "tig00000441_pilon" chrStart: 97517568
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 364  "tig00000442_pilon" chrStart: 97779712
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 365  "tig00000443_pilon" chrStart: 98041856
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 366  "tig00000444_pilon" chrStart: 98304000
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 367  "tig00000445_pilon" chrStart: 98566144
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 368  "tig00000446_pilon" chrStart: 98828288
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 369  "tig00000447_pilon" chrStart: 99090432
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 370  "tig00000448_pilon" chrStart: 99352576
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 371  "tig00000449_pilon" chrStart: 99614720
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 372  "tig00000450_pilon" chrStart: 99876864
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 373  "tig00000451_pilon" chrStart: 100139008
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 374  "tig00000452_pilon" chrStart: 100401152
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 375  "tig00000453_pilon" chrStart: 100663296
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 376  "tig00000454_pilon" chrStart: 100925440
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 377  "tig00000455_pilon" chrStart: 101187584
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 378  "tig00000456_pilon" chrStart: 101449728
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 379  "tig00000457_pilon" chrStart: 101711872
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 380  "tig00000458_pilon" chrStart: 101974016
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 381  "tig00000459_pilon" chrStart: 102236160
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 382  "tig00000460_pilon" chrStart: 102498304
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 383  "tig00000461_pilon" chrStart: 102760448
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 384  "tig00000462_pilon" chrStart: 103022592
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 385  "tig00000463_pilon" chrStart: 103284736
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 386  "tig00000464_pilon" chrStart: 103546880
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 387  "tig00000465_pilon" chrStart: 103809024
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 388  "tig00000466_pilon" chrStart: 104071168
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 389  "tig00000467_pilon" chrStart: 104333312
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 390  "tig00000468_pilon" chrStart: 104595456
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 391  "tig00000469_pilon" chrStart: 104857600
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 392  "tig00000470_pilon" chrStart: 105119744
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 393  "tig00000471_pilon" chrStart: 105381888
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 394  "tig00000472_pilon" chrStart: 105644032
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 395  "tig00000473_pilon" chrStart: 105906176
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 396  "tig00000474_pilon" chrStart: 106168320
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 397  "tig00000475_pilon" chrStart: 106430464
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 398  "tig00000476_pilon" chrStart: 106692608
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 399  "tig00000477_pilon" chrStart: 106954752
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 400  "tig00000478_pilon" chrStart: 107216896
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 401  "tig00000479_pilon" chrStart: 107479040
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 402  "tig00000480_pilon" chrStart: 107741184
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 403  "tig00000481_pilon" chrStart: 108003328
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 404  "tig00000482_pilon" chrStart: 108265472
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 405  "tig00000483_pilon" chrStart: 108527616
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 406  "tig00000484_pilon" chrStart: 108789760
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 407  "tig00000485_pilon" chrStart: 109051904
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 408  "tig00000486_pilon" chrStart: 109314048
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 409  "tig00000487_pilon" chrStart: 109576192
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 410  "tig00000488_pilon" chrStart: 109838336
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 411  "tig00000489_pilon" chrStart: 110100480
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 412  "tig00000490_pilon" chrStart: 110362624
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 413  "tig00000491_pilon" chrStart: 110624768
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 414  "tig00000492_pilon" chrStart: 110886912
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 415  "tig00000493_pilon" chrStart: 111149056
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 416  "tig00000494_pilon" chrStart: 111411200
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 417  "tig00000495_pilon" chrStart: 111673344
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 418  "tig00000496_pilon" chrStart: 111935488
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 419  "tig00000497_pilon" chrStart: 112197632
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 420  "tig00000498_pilon" chrStart: 112459776
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 421  "tig00000499_pilon" chrStart: 112721920
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 422  "tig00000500_pilon" chrStart: 112984064
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 423  "tig00000501_pilon" chrStart: 113246208
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 424  "tig00000502_pilon" chrStart: 113508352
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 425  "tig00000503_pilon" chrStart: 113770496
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 426  "tig00000504_pilon" chrStart: 114032640
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 427  "tig00000505_pilon" chrStart: 114294784
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 428  "tig00000506_pilon" chrStart: 114556928
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 429  "tig00000507_pilon" chrStart: 114819072
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 430  "tig00000508_pilon" chrStart: 115081216
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 431  "tig00000509_pilon" chrStart: 115343360
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 432  "tig00000510_pilon" chrStart: 115605504
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 433  "tig00000511_pilon" chrStart: 115867648
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 434  "tig00000512_pilon" chrStart: 116129792
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 435  "tig00000513_pilon" chrStart: 116391936
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 436  "tig00000514_pilon" chrStart: 116654080
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 437  "tig00000515_pilon" chrStart: 116916224
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 438  "tig00000516_pilon" chrStart: 117178368
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 439  "tig00000517_pilon" chrStart: 117440512
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 440  "tig00000518_pilon" chrStart: 117702656
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 441  "tig00000519_pilon" chrStart: 117964800
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 442  "tig00000520_pilon" chrStart: 118226944
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 443  "tig00000521_pilon" chrStart: 118489088
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 444  "tig00000522_pilon" chrStart: 118751232
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 445  "tig00000523_pilon" chrStart: 119013376
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 446  "tig00000524_pilon" chrStart: 119275520
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 447  "tig00000525_pilon" chrStart: 119537664
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 448  "tig00000526_pilon" chrStart: 119799808
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 449  "tig00000527_pilon" chrStart: 120061952
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 450  "tig00000528_pilon" chrStart: 120324096
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 451  "tig00000529_pilon" chrStart: 120586240
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 452  "tig00000530_pilon" chrStart: 120848384
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 453  "tig00000531_pilon" chrStart: 121110528
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 454  "tig00000532_pilon" chrStart: 121372672
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 455  "tig00000533_pilon" chrStart: 121634816
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 456  "tig00000534_pilon" chrStart: 121896960
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 457  "tig00000535_pilon" chrStart: 122159104
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 458  "tig00000536_pilon" chrStart: 122421248
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 459  "tig00000537_pilon" chrStart: 122683392
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 460  "tig00000538_pilon" chrStart: 122945536
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 461  "tig00000539_pilon" chrStart: 123207680
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 462  "tig00000540_pilon" chrStart: 123469824
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 463  "tig00000541_pilon" chrStart: 123731968
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 464  "tig00000542_pilon" chrStart: 123994112
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 465  "tig00000543_pilon" chrStart: 124256256
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 466  "tig00000545_pilon" chrStart: 124518400
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 467  "tig00000546_pilon" chrStart: 124780544
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 468  "tig00000547_pilon" chrStart: 125042688
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 469  "tig00000548_pilon" chrStart: 125304832
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 470  "tig00000549_pilon" chrStart: 125566976
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 471  "tig00000550_pilon" chrStart: 125829120
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 472  "tig00000551_pilon" chrStart: 126091264
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 473  "tig00000552_pilon" chrStart: 126353408
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 474  "tig00000553_pilon" chrStart: 126615552
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 475  "tig00000554_pilon" chrStart: 126877696
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 476  "tig00000555_pilon" chrStart: 127139840
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 477  "tig00000556_pilon" chrStart: 127401984
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 478  "tig00000557_pilon" chrStart: 127664128
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 479  "tig00000558_pilon" chrStart: 127926272
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 480  "tig00000559_pilon" chrStart: 128188416
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 481  "tig00000560_pilon" chrStart: 128450560
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 482  "tig00000561_pilon" chrStart: 128712704
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 483  "tig00000562_pilon" chrStart: 128974848
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 484  "tig00000563_pilon" chrStart: 129236992
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 485  "tig00000564_pilon" chrStart: 129499136
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 486  "tig00000565_pilon" chrStart: 129761280
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 487  "tig00000566_pilon" chrStart: 130023424
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 488  "tig00000567_pilon" chrStart: 130285568
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 489  "tig00000568_pilon" chrStart: 130547712
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 490  "tig00000569_pilon" chrStart: 130809856
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 491  "tig00000570_pilon" chrStart: 131072000
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 492  "tig00000571_pilon" chrStart: 131334144
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 493  "tig00000572_pilon" chrStart: 131596288
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 494  "tig00000573_pilon" chrStart: 131858432
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 495  "tig00000574_pilon" chrStart: 132120576
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 496  "tig00000575_pilon" chrStart: 132382720
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 497  "tig00000576_pilon" chrStart: 132644864
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 498  "tig00000577_pilon" chrStart: 132907008
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 499  "tig00000578_pilon" chrStart: 133169152
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 500  "tig00000579_pilon" chrStart: 133431296
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 501  "tig00000581_pilon" chrStart: 133693440
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 502  "tig00000582_pilon" chrStart: 133955584
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 503  "tig00000583_pilon" chrStart: 134217728
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 504  "tig00000584_pilon" chrStart: 134479872
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 505  "tig00000585_pilon" chrStart: 134742016
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 506  "tig00000587_pilon" chrStart: 135004160
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 507  "tig00000588_pilon" chrStart: 135266304
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 508  "tig00000589_pilon" chrStart: 135528448
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 509  "tig00000590_pilon" chrStart: 135790592
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 510  "tig00000591_pilon" chrStart: 136052736
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 511  "tig00000592_pilon" chrStart: 136314880
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 512  "tig00000593_pilon" chrStart: 136577024
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 513  "tig00000594_pilon" chrStart: 136839168
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 514  "tig00000595_pilon" chrStart: 137101312
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 515  "tig00000596_pilon" chrStart: 137363456
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 516  "tig00000597_pilon" chrStart: 137625600
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 517  "tig00000598_pilon" chrStart: 137887744
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 518  "tig00000599_pilon" chrStart: 138149888
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 519  "tig00000600_pilon" chrStart: 138412032
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 520  "tig00000601_pilon" chrStart: 138674176
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 521  "tig00000602_pilon" chrStart: 138936320
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 522  "tig00000603_pilon" chrStart: 139198464
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 523  "tig00000604_pilon" chrStart: 139460608
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 524  "tig00000605_pilon" chrStart: 139722752
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 525  "tig00000606_pilon" chrStart: 139984896
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 526  "tig00000608_pilon" chrStart: 140247040
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 527  "tig00000609_pilon" chrStart: 140509184
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 528  "tig00000610_pilon" chrStart: 140771328
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 529  "tig00000611_pilon" chrStart: 141033472
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 530  "tig00000612_pilon" chrStart: 141295616
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 531  "tig00000613_pilon" chrStart: 141557760
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 532  "tig00000614_pilon" chrStart: 141819904
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 533  "tig00000615_pilon" chrStart: 142082048
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 534  "tig00000616_pilon" chrStart: 142344192
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 535  "tig00000617_pilon" chrStart: 142606336
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 536  "tig00000618_pilon" chrStart: 142868480
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 537  "tig00000619_pilon" chrStart: 143130624
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 538  "tig00000620_pilon" chrStart: 143392768
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 539  "tig00000621_pilon" chrStart: 143654912
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 540  "tig00000622_pilon" chrStart: 143917056
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 541  "tig00000623_pilon" chrStart: 144179200
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 542  "tig00000624_pilon" chrStart: 144441344
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 543  "tig00000625_pilon" chrStart: 144703488
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 544  "tig00000626_pilon" chrStart: 144965632
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 545  "tig00000627_pilon" chrStart: 145227776
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 546  "tig00000628_pilon" chrStart: 145489920
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 547  "tig00000629_pilon" chrStart: 145752064
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 548  "tig00000631_pilon" chrStart: 146014208
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 549  "tig00000632_pilon" chrStart: 146276352
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 550  "tig00000633_pilon" chrStart: 146538496
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 551  "tig00000634_pilon" chrStart: 146800640
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 552  "tig00000635_pilon" chrStart: 147062784
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 553  "tig00000636_pilon" chrStart: 147324928
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 554  "tig00000637_pilon" chrStart: 147587072
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 555  "tig00000639_pilon" chrStart: 147849216
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 556  "tig00000640_pilon" chrStart: 148111360
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 557  "tig00000641_pilon" chrStart: 148373504
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 558  "tig00000642_pilon" chrStart: 148635648
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 559  "tig00000643_pilon" chrStart: 148897792
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 560  "tig00000644_pilon" chrStart: 149159936
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 561  "tig00000645_pilon" chrStart: 149422080
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 562  "tig00000646_pilon" chrStart: 149684224
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 563  "tig00000647_pilon" chrStart: 149946368
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 564  "tig00000648_pilon" chrStart: 150208512
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 565  "tig00000649_pilon" chrStart: 150470656
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 566  "tig00000650_pilon" chrStart: 150732800
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 567  "tig00000651_pilon" chrStart: 150994944
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 568  "tig00000652_pilon" chrStart: 151257088
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 569  "tig00000653_pilon" chrStart: 151519232
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 570  "tig00000654_pilon" chrStart: 151781376
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 571  "tig00000655_pilon" chrStart: 152043520
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 572  "tig00000656_pilon" chrStart: 152305664
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 573  "tig00000657_pilon" chrStart: 152567808
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 574  "tig00000658_pilon" chrStart: 152829952
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 575  "tig00000659_pilon" chrStart: 153092096
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 576  "tig00000660_pilon" chrStart: 153354240
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 577  "tig00000661_pilon" chrStart: 153616384
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 578  "tig00000662_pilon" chrStart: 153878528
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 579  "tig00000663_pilon" chrStart: 154140672
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 580  "tig00000664_pilon" chrStart: 154402816
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 581  "tig00000665_pilon" chrStart: 154664960
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 582  "tig00000666_pilon" chrStart: 154927104
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 583  "tig00000667_pilon" chrStart: 155189248
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 584  "tig00000668_pilon" chrStart: 155451392
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 585  "tig00000669_pilon" chrStart: 155713536
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 586  "tig00000670_pilon" chrStart: 155975680
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 587  "tig00000671_pilon" chrStart: 156237824
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 588  "tig00000672_pilon" chrStart: 156499968
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 589  "tig00000673_pilon" chrStart: 156762112
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 590  "tig00000674_pilon" chrStart: 157024256
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 591  "tig00000675_pilon" chrStart: 157286400
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 592  "tig00000676_pilon" chrStart: 157548544
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 593  "tig00000677_pilon" chrStart: 157810688
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 594  "tig00000678_pilon" chrStart: 158072832
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 595  "tig00000679_pilon" chrStart: 158334976
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 596  "tig00000680_pilon" chrStart: 158597120
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 597  "tig00000681_pilon" chrStart: 158859264
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 598  "tig00000682_pilon" chrStart: 159121408
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 599  "tig00000683_pilon" chrStart: 159383552
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 600  "tig00000684_pilon" chrStart: 159645696
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 601  "tig00000685_pilon" chrStart: 159907840
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 602  "tig00000686_pilon" chrStart: 160169984
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 603  "tig00000687_pilon" chrStart: 160432128
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 604  "tig00000688_pilon" chrStart: 160694272
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 605  "tig00000689_pilon" chrStart: 160956416
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 606  "tig00000690_pilon" chrStart: 161218560
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 607  "tig00000691_pilon" chrStart: 161480704
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 608  "tig00000692_pilon" chrStart: 161742848
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 609  "tig00000693_pilon" chrStart: 162004992
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 610  "tig00000694_pilon" chrStart: 162267136
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 611  "tig00000695_pilon" chrStart: 162529280
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 612  "tig00000696_pilon" chrStart: 162791424
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 613  "tig00000697_pilon" chrStart: 163053568
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 614  "tig00000698_pilon" chrStart: 163315712
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 615  "tig00000699_pilon" chrStart: 163577856
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 616  "tig00000700_pilon" chrStart: 163840000
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 617  "tig00000701_pilon" chrStart: 164102144
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 618  "tig00000702_pilon" chrStart: 164364288
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 619  "tig00000703_pilon" chrStart: 164626432
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 620  "tig00000705_pilon" chrStart: 164888576
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 621  "tig00000707_pilon" chrStart: 165150720
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 622  "tig00000708_pilon" chrStart: 165412864
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 623  "tig00000709_pilon" chrStart: 165675008
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 624  "tig00000710_pilon" chrStart: 165937152
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 625  "tig00000711_pilon" chrStart: 166199296
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 626  "tig00000712_pilon" chrStart: 166461440
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 627  "tig00000713_pilon" chrStart: 166723584
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 628  "tig00000714_pilon" chrStart: 166985728
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 629  "tig00000715_pilon" chrStart: 167510016
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 630  "tig00000716_pilon" chrStart: 167772160
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 631  "tig00000717_pilon" chrStart: 168034304
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 632  "tig00000718_pilon" chrStart: 168296448
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 633  "tig00000719_pilon" chrStart: 168558592
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 634  "tig00000720_pilon" chrStart: 169345024
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 635  "tig00000721_pilon" chrStart: 169607168
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 636  "tig00000722_pilon" chrStart: 170655744
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 637  "tig00000723_pilon" chrStart: 171180032
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 638  "tig00000724_pilon" chrStart: 171442176
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 639  "tig00000725_pilon" chrStart: 171966464
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 640  "tig00000726_pilon" chrStart: 172228608
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 641  "tig00000727_pilon" chrStart: 173539328
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 642  "tig00000728_pilon" chrStart: 174063616
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 643  "tig00000729_pilon" chrStart: 174325760
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 644  "tig00000730_pilon" chrStart: 174587904
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 645  "tig00000731_pilon" chrStart: 175374336
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 646  "tig00000732_pilon" chrStart: 175636480
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 647  "tig00000733_pilon" chrStart: 175898624
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 648  "tig00000734_pilon" chrStart: 176160768
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 649  "tig00000735_pilon" chrStart: 176422912
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 650  "tig00000736_pilon" chrStart: 176947200
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 651  "tig00000737_pilon" chrStart: 177209344
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 652  "tig00000738_pilon" chrStart: 177471488
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 653  "tig00000739_pilon" chrStart: 178257920
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 654  "tig00000740_pilon" chrStart: 178782208
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 655  "tig00000741_pilon" chrStart: 179306496
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 656  "tig00000742_pilon" chrStart: 179568640
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 657  "tig00000743_pilon" chrStart: 179830784
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 658  "tig00000744_pilon" chrStart: 180355072
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 659  "tig00000745_pilon" chrStart: 180617216
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 660  "tig00000746_pilon" chrStart: 180879360
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 661  "tig00000747_pilon" chrStart: 181141504
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 662  "tig00000748_pilon" chrStart: 181403648
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 663  "tig00000749_pilon" chrStart: 181665792
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 664  "tig00000750_pilon" chrStart: 181927936
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 665  "tig00000751_pilon" chrStart: 182190080
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 666  "tig00000752_pilon" chrStart: 182452224
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 667  "tig00000753_pilon" chrStart: 182714368
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 668  "tig00000754_pilon" chrStart: 182976512
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 669  "tig00000755_pilon" chrStart: 183762944
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 670  "tig00000756_pilon" chrStart: 184025088
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 671  "tig00000757_pilon" chrStart: 185073664
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 672  "tig00000758_pilon" chrStart: 185335808
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 673  "tig00000759_pilon" chrStart: 185597952
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 674  "tig00000760_pilon" chrStart: 185860096
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 675  "tig00000761_pilon" chrStart: 186122240
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 676  "tig00000762_pilon" chrStart: 186384384
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 677  "tig00000763_pilon" chrStart: 186646528
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 678  "tig00000764_pilon" chrStart: 187432960
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 679  "tig00000765_pilon" chrStart: 187957248
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 680  "tig00000766_pilon" chrStart: 188219392
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 681  "tig00000767_pilon" chrStart: 188481536
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 682  "tig00000768_pilon" chrStart: 188743680
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 683  "tig00000769_pilon" chrStart: 189005824
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 684  "tig00000770_pilon" chrStart: 189267968
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 685  "tig00000771_pilon" chrStart: 190316544
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 686  "tig00000772_pilon" chrStart: 190578688
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 687  "tig00000773_pilon" chrStart: 190840832
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 688  "tig00000774_pilon" chrStart: 191102976
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 689  "tig00000775_pilon" chrStart: 191365120
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 690  "tig00000776_pilon" chrStart: 191889408
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 691  "tig00000777_pilon" chrStart: 192151552
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 692  "tig00000778_pilon" chrStart: 192413696
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 693  "tig00000779_pilon" chrStart: 192675840
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 694  "tig00000780_pilon" chrStart: 192937984
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 695  "tig00000781_pilon" chrStart: 193200128
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 696  "tig00000782_pilon" chrStart: 193724416
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 697  "tig00000783_pilon" chrStart: 193986560
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 698  "tig00000784_pilon" chrStart: 194248704
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 699  "tig00000785_pilon" chrStart: 194510848
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 700  "tig00000786_pilon" chrStart: 194772992
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 701  "tig00000787_pilon" chrStart: 195035136
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 702  "tig00000788_pilon" chrStart: 195297280
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 703  "tig00000789_pilon" chrStart: 195559424
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 704  "tig00000790_pilon" chrStart: 195821568
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 705  "tig00000791_pilon" chrStart: 196083712
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 706  "tig00000792_pilon" chrStart: 196345856
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 707  "tig00000793_pilon" chrStart: 196608000
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 708  "tig00000794_pilon" chrStart: 196870144
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 709  "tig00000795_pilon" chrStart: 197394432
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 710  "tig00000796_pilon" chrStart: 197656576
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 711  "tig00000797_pilon" chrStart: 197918720
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 712  "tig00000798_pilon" chrStart: 198443008
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 713  "tig00000799_pilon" chrStart: 198705152
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 714  "tig00000800_pilon" chrStart: 198967296
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 715  "tig00000801_pilon" chrStart: 199491584
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 716  "tig00000802_pilon" chrStart: 199753728
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 717  "tig00000803_pilon" chrStart: 200015872
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 718  "tig00000804_pilon" chrStart: 200278016
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 719  "tig00000805_pilon" chrStart: 200540160
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 720  "tig00000806_pilon" chrStart: 200802304
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 721  "tig00000807_pilon" chrStart: 201064448
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 722  "tig00000808_pilon" chrStart: 201326592
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 723  "tig00000809_pilon" chrStart: 201588736
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 724  "tig00000810_pilon" chrStart: 201850880
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 725  "tig00000811_pilon" chrStart: 202375168
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 726  "tig00000812_pilon" chrStart: 202637312
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 727  "tig00000813_pilon" chrStart: 202899456
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 728  "tig00000814_pilon" chrStart: 203161600
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 729  "tig00000815_pilon" chrStart: 203423744
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 730  "tig00000816_pilon" chrStart: 203685888
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 731  "tig00000817_pilon" chrStart: 203948032
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 732  "tig00000818_pilon" chrStart: 204210176
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 733  "tig00000819_pilon" chrStart: 204472320
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 734  "tig00000820_pilon" chrStart: 204996608
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 735  "tig00000821_pilon" chrStart: 205258752
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 736  "tig00000822_pilon" chrStart: 205520896
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 737  "tig00000823_pilon" chrStart: 205783040
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 738  "tig00000824_pilon" chrStart: 206045184
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 739  "tig00000825_pilon" chrStart: 206307328
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 740  "tig00000826_pilon" chrStart: 206569472
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 741  "tig00000827_pilon" chrStart: 206831616
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 742  "tig00000828_pilon" chrStart: 207355904
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 743  "tig00000829_pilon" chrStart: 207618048
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 744  "tig00000830_pilon" chrStart: 207880192
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 745  "tig00000831_pilon" chrStart: 208142336
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 746  "tig00000832_pilon" chrStart: 208666624
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 747  "tig00000833_pilon" chrStart: 208928768
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 748  "tig00000834_pilon" chrStart: 209190912
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 749  "tig00000835_pilon" chrStart: 209453056
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 750  "tig00000836_pilon" chrStart: 209715200
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 751  "tig00000837_pilon" chrStart: 209977344
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 752  "tig00000838_pilon" chrStart: 210239488
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 753  "tig00000839_pilon" chrStart: 210501632
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 754  "tig00000840_pilon" chrStart: 210763776
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 755  "tig00000841_pilon" chrStart: 211025920
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 756  "tig00000842_pilon" chrStart: 211288064
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 757  "tig00000843_pilon" chrStart: 211812352
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 758  "tig00000844_pilon" chrStart: 212336640
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 759  "tig00000845_pilon" chrStart: 212598784
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 760  "tig00000846_pilon" chrStart: 212860928
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 761  "tig00000847_pilon" chrStart: 213123072
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 762  "tig00000848_pilon" chrStart: 213385216
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 763  "tig00000849_pilon" chrStart: 213647360
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 764  "tig00000850_pilon" chrStart: 213909504
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 765  "tig00000851_pilon" chrStart: 214171648
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 766  "tig00000852_pilon" chrStart: 214433792
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 767  "tig00000853_pilon" chrStart: 214695936
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 768  "tig00000854_pilon" chrStart: 214958080
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 769  "tig00000855_pilon" chrStart: 215220224
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 770  "tig00000856_pilon" chrStart: 215482368
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 771  "tig00000857_pilon" chrStart: 215744512
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 772  "tig00000858_pilon" chrStart: 216006656
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 773  "tig00000859_pilon" chrStart: 216268800
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 774  "tig00000860_pilon" chrStart: 216530944
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 775  "tig00000861_pilon" chrStart: 216793088
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 776  "tig00000862_pilon" chrStart: 217055232
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 777  "tig00000863_pilon" chrStart: 217317376
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 778  "tig00000864_pilon" chrStart: 217579520
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 779  "tig00000865_pilon" chrStart: 217841664
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 780  "tig00000866_pilon" chrStart: 218103808
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 781  "tig00000867_pilon" chrStart: 218365952
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 782  "tig00000868_pilon" chrStart: 218628096
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 783  "tig00000869_pilon" chrStart: 218890240
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 784  "tig00000870_pilon" chrStart: 219152384
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 785  "tig00000871_pilon" chrStart: 219414528
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 786  "tig00000872_pilon" chrStart: 219676672
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 787  "tig00000873_pilon" chrStart: 219938816
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 788  "tig00000874_pilon" chrStart: 220200960
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 789  "tig00000875_pilon" chrStart: 220463104
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 790  "tig00000876_pilon" chrStart: 220725248
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 791  "tig00000877_pilon" chrStart: 220987392
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 792  "tig00000878_pilon" chrStart: 221249536
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 793  "tig00000879_pilon" chrStart: 221511680
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 794  "tig00000880_pilon" chrStart: 221773824
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 795  "tig00000881_pilon" chrStart: 222035968
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 796  "tig00000882_pilon" chrStart: 222298112
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 797  "tig00000883_pilon" chrStart: 222560256
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 798  "tig00000884_pilon" chrStart: 222822400
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 799  "tig00000885_pilon" chrStart: 223084544
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 800  "tig00000886_pilon" chrStart: 223346688
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 801  "tig00000887_pilon" chrStart: 223608832
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 802  "tig00000888_pilon" chrStart: 223870976
+/proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked : chr # 803  "tig00000889_pilon" chrStart: 224133120
+Chromosome sequence lengths: 
+tig00000002_pilon	28720
+tig00000006_pilon	18521
+tig00000009_pilon	23296
+tig00000011_pilon	21861
+tig00000013_pilon	24038
+tig00000016_pilon	11697
+tig00000017_pilon	30807
+tig00000018_pilon	26712
+tig00000020_pilon	27699
+tig00000022_pilon	19564
+tig00000023_pilon	22003
+tig00000024_pilon	14311
+tig00000025_pilon	12506
+tig00000028_pilon	24074
+tig00000029_pilon	33428
+tig00000031_pilon	20072
+tig00000033_pilon	27536
+tig00000035_pilon	17179
+tig00000036_pilon	23748
+tig00000037_pilon	22974
+tig00000038_pilon	20504
+tig00000039_pilon	11641
+tig00000042_pilon	27938
+tig00000043_pilon	13038
+tig00000045_pilon	23888
+tig00000046_pilon	18301
+tig00000047_pilon	28237
+tig00000048_pilon	23907
+tig00000049_pilon	15943
+tig00000050_pilon	22799
+tig00000051_pilon	19816
+tig00000052_pilon	14992
+tig00000054_pilon	21271
+tig00000055_pilon	17703
+tig00000056_pilon	28828
+tig00000057_pilon	27172
+tig00000058_pilon	17726
+tig00000059_pilon	20969
+tig00000060_pilon	21865
+tig00000062_pilon	18989
+tig00000063_pilon	18422
+tig00000065_pilon	14451
+tig00000066_pilon	39711
+tig00000067_pilon	21652
+tig00000068_pilon	21001
+tig00000069_pilon	19819
+tig00000070_pilon	26007
+tig00000071_pilon	20134
+tig00000072_pilon	21286
+tig00000074_pilon	28209
+tig00000075_pilon	21494
+tig00000076_pilon	20040
+tig00000078_pilon	21263
+tig00000079_pilon	19261
+tig00000081_pilon	19786
+tig00000082_pilon	47154
+tig00000083_pilon	22027
+tig00000085_pilon	13964
+tig00000087_pilon	16963
+tig00000089_pilon	267123
+tig00000090_pilon	14780
+tig00000091_pilon	16153
+tig00000094_pilon	14703
+tig00000095_pilon	596608
+tig00000097_pilon	22565
+tig00000098_pilon	31772
+tig00000100_pilon	19978
+tig00000102_pilon	26185
+tig00000103_pilon	12540
+tig00000104_pilon	11873
+tig00000106_pilon	31972
+tig00000108_pilon	15044
+tig00000110_pilon	15200
+tig00000111_pilon	22268
+tig00000115_pilon	15501
+tig00000116_pilon	15373
+tig00000117_pilon	16780
+tig00000118_pilon	13952
+tig00000119_pilon	19152
+tig00000121_pilon	23874
+tig00000122_pilon	14817
+tig00000123_pilon	22068
+tig00000124_pilon	30701
+tig00000126_pilon	26380
+tig00000127_pilon	517150
+tig00000129_pilon	20180
+tig00000130_pilon	19904
+tig00000131_pilon	28809
+tig00000132_pilon	30516
+tig00000135_pilon	25076
+tig00000137_pilon	22772
+tig00000139_pilon	33876
+tig00000141_pilon	23081
+tig00000142_pilon	16900
+tig00000144_pilon	30159
+tig00000145_pilon	23237
+tig00000147_pilon	21652
+tig00000148_pilon	10992
+tig00000149_pilon	18421
+tig00000151_pilon	20314
+tig00000152_pilon	345918
+tig00000153_pilon	21865
+tig00000155_pilon	19838
+tig00000156_pilon	18653
+tig00000157_pilon	18020
+tig00000158_pilon	19323
+tig00000159_pilon	22813
+tig00000160_pilon	404779
+tig00000161_pilon	42424
+tig00000162_pilon	15225
+tig00000163_pilon	15186
+tig00000165_pilon	21292
+tig00000167_pilon	18245
+tig00000170_pilon	33509
+tig00000171_pilon	263032
+tig00000172_pilon	9586
+tig00000173_pilon	18767
+tig00000174_pilon	21531
+tig00000175_pilon	21655
+tig00000176_pilon	21892
+tig00000178_pilon	17804
+tig00000179_pilon	23510
+tig00000181_pilon	15775
+tig00000182_pilon	12866
+tig00000184_pilon	277478
+tig00000185_pilon	26227
+tig00000187_pilon	35754
+tig00000188_pilon	16783
+tig00000190_pilon	19014
+tig00000191_pilon	15520
+tig00000192_pilon	223524
+tig00000194_pilon	230539
+tig00000195_pilon	30174
+tig00000196_pilon	262873
+tig00000197_pilon	17986
+tig00000198_pilon	192880
+tig00000199_pilon	189806
+tig00000200_pilon	234577
+tig00000202_pilon	22943
+tig00000204_pilon	20349
+tig00000206_pilon	17711
+tig00000207_pilon	23367
+tig00000208_pilon	22428
+tig00000209_pilon	14520
+tig00000210_pilon	26266
+tig00000211_pilon	18330
+tig00000212_pilon	183030
+tig00000213_pilon	18988
+tig00000215_pilon	17765
+tig00000217_pilon	12040
+tig00000218_pilon	22644
+tig00000219_pilon	20180
+tig00000220_pilon	16582
+tig00000222_pilon	16211
+tig00000223_pilon	20233
+tig00000224_pilon	17938
+tig00000226_pilon	24242
+tig00000227_pilon	28188
+tig00000228_pilon	27679
+tig00000230_pilon	167520
+tig00000231_pilon	41215
+tig00000232_pilon	16894
+tig00000235_pilon	19444
+tig00000236_pilon	20755
+tig00000237_pilon	10743
+tig00000238_pilon	23600
+tig00000239_pilon	95034
+tig00000240_pilon	26494
+tig00000241_pilon	34485
+tig00000242_pilon	13863
+tig00000243_pilon	85274
+tig00000245_pilon	20442
+tig00000246_pilon	86192
+tig00000247_pilon	22817
+tig00000249_pilon	16905
+tig00000250_pilon	27246
+tig00000251_pilon	40102
+tig00000252_pilon	16043
+tig00000253_pilon	19956
+tig00000254_pilon	19697
+tig00000255_pilon	22672
+tig00000256_pilon	51729
+tig00000257_pilon	57887
+tig00000259_pilon	61829
+tig00000261_pilon	27189
+tig00000262_pilon	36998
+tig00000263_pilon	24573
+tig00000264_pilon	41980
+tig00000265_pilon	24309
+tig00000266_pilon	38730
+tig00000267_pilon	36941
+tig00000268_pilon	45265
+tig00000269_pilon	27871
+tig00000270_pilon	14790
+tig00000271_pilon	23408
+tig00000272_pilon	14962
+tig00000273_pilon	26887
+tig00000274_pilon	55694
+tig00000275_pilon	13181
+tig00000276_pilon	3279
+tig00000277_pilon	12091
+tig00000278_pilon	21318
+tig00000279_pilon	28690
+tig00000280_pilon	26050
+tig00000281_pilon	19766
+tig00000283_pilon	25311
+tig00000284_pilon	16783
+tig00000285_pilon	29284
+tig00000286_pilon	27801
+tig00000287_pilon	26213
+tig00000288_pilon	22181
+tig00000289_pilon	20540
+tig00000290_pilon	26056
+tig00000291_pilon	24105
+tig00000292_pilon	24094
+tig00000293_pilon	16963
+tig00000294_pilon	18695
+tig00000295_pilon	18476
+tig00000296_pilon	15783
+tig00000297_pilon	25419
+tig00000298_pilon	19864
+tig00000299_pilon	13978
+tig00000300_pilon	19505
+tig00000301_pilon	13697
+tig00000302_pilon	13002
+tig00000303_pilon	24805
+tig00000304_pilon	33860
+tig00000305_pilon	30582
+tig00000306_pilon	7348
+tig00000307_pilon	15740
+tig00000308_pilon	20976
+tig00000309_pilon	16213
+tig00000310_pilon	24117
+tig00000311_pilon	26040
+tig00000312_pilon	16972
+tig00000313_pilon	22211
+tig00000314_pilon	16429
+tig00000315_pilon	21274
+tig00000316_pilon	22408
+tig00000317_pilon	9337
+tig00000318_pilon	15047
+tig00000319_pilon	15522
+tig00000320_pilon	10871
+tig00000321_pilon	17714
+tig00000322_pilon	30847
+tig00000323_pilon	6424
+tig00000324_pilon	12865
+tig00000325_pilon	23211
+tig00000326_pilon	21486
+tig00000327_pilon	13117
+tig00000328_pilon	14991
+tig00000329_pilon	14974
+tig00000330_pilon	12896
+tig00000331_pilon	16440
+tig00000332_pilon	15987
+tig00000333_pilon	10497
+tig00000334_pilon	7833
+tig00000335_pilon	19711
+tig00000336_pilon	20024
+tig00000337_pilon	14280
+tig00000338_pilon	12032
+tig00000339_pilon	10141
+tig00000340_pilon	12355
+tig00000341_pilon	19063
+tig00000342_pilon	12437
+tig00000343_pilon	13383
+tig00000344_pilon	10260
+tig00000345_pilon	11404
+tig00000346_pilon	13282
+tig00000347_pilon	21341
+tig00000348_pilon	19617
+tig00000349_pilon	9800
+tig00000350_pilon	11352
+tig00000351_pilon	10934
+tig00000352_pilon	18408
+tig00000353_pilon	14595
+tig00000354_pilon	13555
+tig00000355_pilon	17645
+tig00000356_pilon	12846
+tig00000357_pilon	14853
+tig00000358_pilon	19647
+tig00000359_pilon	8238
+tig00000360_pilon	13415
+tig00000361_pilon	17250
+tig00000362_pilon	21397
+tig00000363_pilon	15626
+tig00000364_pilon	17061
+tig00000365_pilon	14953
+tig00000366_pilon	12495
+tig00000367_pilon	11881
+tig00000368_pilon	10549
+tig00000369_pilon	17355
+tig00000370_pilon	10284
+tig00000371_pilon	12998
+tig00000372_pilon	12784
+tig00000373_pilon	14051
+tig00000374_pilon	11219
+tig00000375_pilon	12822
+tig00000376_pilon	13538
+tig00000377_pilon	11579
+tig00000378_pilon	12076
+tig00000379_pilon	18163
+tig00000380_pilon	18985
+tig00000381_pilon	18128
+tig00000382_pilon	17395
+tig00000383_pilon	10454
+tig00000384_pilon	16482
+tig00000385_pilon	24876
+tig00000386_pilon	21412
+tig00000387_pilon	9294
+tig00000388_pilon	11270
+tig00000389_pilon	13781
+tig00000390_pilon	9300
+tig00000391_pilon	10291
+tig00000392_pilon	11483
+tig00000393_pilon	11641
+tig00000394_pilon	9680
+tig00000395_pilon	11069
+tig00000396_pilon	25245
+tig00000397_pilon	7947
+tig00000398_pilon	9615
+tig00000399_pilon	12928
+tig00000400_pilon	15063
+tig00000401_pilon	10362
+tig00000402_pilon	14059
+tig00000403_pilon	12723
+tig00000404_pilon	9696
+tig00000405_pilon	24688
+tig00000406_pilon	14192
+tig00000407_pilon	6886
+tig00000408_pilon	8536
+tig00000409_pilon	12077
+tig00000410_pilon	10953
+tig00000411_pilon	11187
+tig00000412_pilon	9023
+tig00000413_pilon	17992
+tig00000414_pilon	8723
+tig00000415_pilon	11056
+tig00000416_pilon	9201
+tig00000417_pilon	5795
+tig00000418_pilon	13007
+tig00000419_pilon	9776
+tig00000420_pilon	8383
+tig00000421_pilon	9495
+tig00000422_pilon	12701
+tig00000423_pilon	13928
+tig00000424_pilon	12502
+tig00000425_pilon	14215
+tig00000426_pilon	6019
+tig00000427_pilon	10718
+tig00000428_pilon	21133
+tig00000429_pilon	18424
+tig00000430_pilon	9093
+tig00000431_pilon	7119
+tig00000432_pilon	11222
+tig00000433_pilon	24199
+tig00000434_pilon	11914
+tig00000435_pilon	12805
+tig00000436_pilon	9954
+tig00000437_pilon	19325
+tig00000438_pilon	7205
+tig00000439_pilon	10236
+tig00000440_pilon	10228
+tig00000441_pilon	10659
+tig00000442_pilon	12707
+tig00000443_pilon	11943
+tig00000444_pilon	17690
+tig00000445_pilon	9265
+tig00000446_pilon	9626
+tig00000447_pilon	9662
+tig00000448_pilon	10670
+tig00000449_pilon	27728
+tig00000450_pilon	17752
+tig00000451_pilon	9634
+tig00000452_pilon	6780
+tig00000453_pilon	7491
+tig00000454_pilon	15488
+tig00000455_pilon	11381
+tig00000456_pilon	13350
+tig00000457_pilon	9572
+tig00000458_pilon	10573
+tig00000459_pilon	23300
+tig00000460_pilon	6765
+tig00000461_pilon	11398
+tig00000462_pilon	7883
+tig00000463_pilon	13099
+tig00000464_pilon	9675
+tig00000465_pilon	9813
+tig00000466_pilon	9528
+tig00000467_pilon	7140
+tig00000468_pilon	8597
+tig00000469_pilon	12041
+tig00000470_pilon	8848
+tig00000471_pilon	9293
+tig00000472_pilon	13864
+tig00000473_pilon	6890
+tig00000474_pilon	8214
+tig00000475_pilon	16073
+tig00000476_pilon	6284
+tig00000477_pilon	10295
+tig00000478_pilon	19194
+tig00000479_pilon	17820
+tig00000480_pilon	11889
+tig00000481_pilon	18918
+tig00000482_pilon	16295
+tig00000483_pilon	3874
+tig00000484_pilon	6441
+tig00000485_pilon	10367
+tig00000486_pilon	15819
+tig00000487_pilon	36910
+tig00000488_pilon	9265
+tig00000489_pilon	10410
+tig00000490_pilon	8388
+tig00000491_pilon	11939
+tig00000492_pilon	13242
+tig00000493_pilon	15519
+tig00000494_pilon	21791
+tig00000495_pilon	10916
+tig00000496_pilon	13427
+tig00000497_pilon	9253
+tig00000498_pilon	7704
+tig00000499_pilon	11179
+tig00000500_pilon	18727
+tig00000501_pilon	7184
+tig00000502_pilon	15259
+tig00000503_pilon	9533
+tig00000504_pilon	13809
+tig00000505_pilon	16146
+tig00000506_pilon	14048
+tig00000507_pilon	17274
+tig00000508_pilon	10214
+tig00000509_pilon	11576
+tig00000510_pilon	10040
+tig00000511_pilon	12113
+tig00000512_pilon	7003
+tig00000513_pilon	8336
+tig00000514_pilon	13654
+tig00000515_pilon	19891
+tig00000516_pilon	10142
+tig00000517_pilon	11709
+tig00000518_pilon	5728
+tig00000519_pilon	6014
+tig00000520_pilon	4478
+tig00000521_pilon	10502
+tig00000522_pilon	15274
+tig00000523_pilon	7826
+tig00000524_pilon	9584
+tig00000525_pilon	9957
+tig00000526_pilon	10656
+tig00000527_pilon	7628
+tig00000528_pilon	6405
+tig00000529_pilon	12450
+tig00000530_pilon	11646
+tig00000531_pilon	12387
+tig00000532_pilon	7099
+tig00000533_pilon	7265
+tig00000534_pilon	9890
+tig00000535_pilon	10641
+tig00000536_pilon	11532
+tig00000537_pilon	17495
+tig00000538_pilon	10137
+tig00000539_pilon	12787
+tig00000540_pilon	9536
+tig00000541_pilon	7759
+tig00000542_pilon	8042
+tig00000543_pilon	10936
+tig00000545_pilon	24489
+tig00000546_pilon	1458
+tig00000547_pilon	6481
+tig00000548_pilon	7880
+tig00000549_pilon	5065
+tig00000550_pilon	6899
+tig00000551_pilon	4768
+tig00000552_pilon	8953
+tig00000553_pilon	14886
+tig00000554_pilon	6703
+tig00000555_pilon	7703
+tig00000556_pilon	11012
+tig00000557_pilon	10022
+tig00000558_pilon	6945
+tig00000559_pilon	10668
+tig00000560_pilon	9384
+tig00000561_pilon	13567
+tig00000562_pilon	11257
+tig00000563_pilon	15748
+tig00000564_pilon	15139
+tig00000565_pilon	10810
+tig00000566_pilon	9466
+tig00000567_pilon	15764
+tig00000568_pilon	9272
+tig00000569_pilon	11479
+tig00000570_pilon	25076
+tig00000571_pilon	2133
+tig00000572_pilon	6614
+tig00000573_pilon	10553
+tig00000574_pilon	7607
+tig00000575_pilon	3759
+tig00000576_pilon	7572
+tig00000577_pilon	9478
+tig00000578_pilon	8942
+tig00000579_pilon	3801
+tig00000581_pilon	6372
+tig00000582_pilon	7761
+tig00000583_pilon	18275
+tig00000584_pilon	8105
+tig00000585_pilon	1436
+tig00000587_pilon	11280
+tig00000588_pilon	10846
+tig00000589_pilon	14453
+tig00000590_pilon	6886
+tig00000591_pilon	2062
+tig00000592_pilon	10091
+tig00000593_pilon	7785
+tig00000594_pilon	9173
+tig00000595_pilon	14002
+tig00000596_pilon	11464
+tig00000597_pilon	5622
+tig00000598_pilon	17200
+tig00000599_pilon	10462
+tig00000600_pilon	11977
+tig00000601_pilon	5449
+tig00000602_pilon	12805
+tig00000603_pilon	11335
+tig00000604_pilon	7618
+tig00000605_pilon	19427
+tig00000606_pilon	11663
+tig00000608_pilon	21260
+tig00000609_pilon	8937
+tig00000610_pilon	12105
+tig00000611_pilon	5575
+tig00000612_pilon	21988
+tig00000613_pilon	10288
+tig00000614_pilon	10306
+tig00000615_pilon	6901
+tig00000616_pilon	5727
+tig00000617_pilon	12506
+tig00000618_pilon	10034
+tig00000619_pilon	9938
+tig00000620_pilon	5637
+tig00000621_pilon	8401
+tig00000622_pilon	5440
+tig00000623_pilon	16212
+tig00000624_pilon	8413
+tig00000625_pilon	9857
+tig00000626_pilon	1933
+tig00000627_pilon	13202
+tig00000628_pilon	26640
+tig00000629_pilon	23332
+tig00000631_pilon	17409
+tig00000632_pilon	16946
+tig00000633_pilon	18384
+tig00000634_pilon	11008
+tig00000635_pilon	12862
+tig00000636_pilon	13231
+tig00000637_pilon	15950
+tig00000639_pilon	7737
+tig00000640_pilon	9388
+tig00000641_pilon	9923
+tig00000642_pilon	4948
+tig00000643_pilon	8004
+tig00000644_pilon	19235
+tig00000645_pilon	12089
+tig00000646_pilon	4886
+tig00000647_pilon	9056
+tig00000648_pilon	8772
+tig00000649_pilon	6977
+tig00000650_pilon	21227
+tig00000651_pilon	6898
+tig00000652_pilon	13283
+tig00000653_pilon	8125
+tig00000654_pilon	8823
+tig00000655_pilon	11937
+tig00000656_pilon	11418
+tig00000657_pilon	6756
+tig00000658_pilon	11188
+tig00000659_pilon	8566
+tig00000660_pilon	9286
+tig00000661_pilon	17921
+tig00000662_pilon	6932
+tig00000663_pilon	10599
+tig00000664_pilon	9081
+tig00000665_pilon	13226
+tig00000666_pilon	6529
+tig00000667_pilon	16653
+tig00000668_pilon	2736
+tig00000669_pilon	9742
+tig00000670_pilon	7538
+tig00000671_pilon	6141
+tig00000672_pilon	10441
+tig00000673_pilon	5301
+tig00000674_pilon	10814
+tig00000675_pilon	5852
+tig00000676_pilon	10309
+tig00000677_pilon	17369
+tig00000678_pilon	10655
+tig00000679_pilon	11491
+tig00000680_pilon	13982
+tig00000681_pilon	13316
+tig00000682_pilon	16872
+tig00000683_pilon	6570
+tig00000684_pilon	9585
+tig00000685_pilon	10909
+tig00000686_pilon	10435
+tig00000687_pilon	15785
+tig00000688_pilon	5921
+tig00000689_pilon	8227
+tig00000690_pilon	13245
+tig00000691_pilon	6774
+tig00000692_pilon	10031
+tig00000693_pilon	5336
+tig00000694_pilon	9813
+tig00000695_pilon	14829
+tig00000696_pilon	9761
+tig00000697_pilon	8113
+tig00000698_pilon	12679
+tig00000699_pilon	6536
+tig00000700_pilon	9065
+tig00000701_pilon	19360
+tig00000702_pilon	12735
+tig00000703_pilon	12812
+tig00000705_pilon	9130
+tig00000707_pilon	10791
+tig00000708_pilon	12177
+tig00000709_pilon	9023
+tig00000710_pilon	16875
+tig00000711_pilon	15698
+tig00000712_pilon	9964
+tig00000713_pilon	216150
+tig00000714_pilon	482136
+tig00000715_pilon	10805
+tig00000716_pilon	10075
+tig00000717_pilon	10104
+tig00000718_pilon	50992
+tig00000719_pilon	595129
+tig00000720_pilon	193422
+tig00000721_pilon	899915
+tig00000722_pilon	289068
+tig00000723_pilon	79719
+tig00000724_pilon	275896
+tig00000725_pilon	105139
+tig00000726_pilon	1252632
+tig00000727_pilon	268961
+tig00000728_pilon	20851
+tig00000729_pilon	13489
+tig00000730_pilon	776139
+tig00000731_pilon	192053
+tig00000732_pilon	18507
+tig00000733_pilon	188204
+tig00000734_pilon	48792
+tig00000735_pilon	502264
+tig00000736_pilon	12599
+tig00000737_pilon	12618
+tig00000738_pilon	773528
+tig00000739_pilon	319573
+tig00000740_pilon	382220
+tig00000741_pilon	95117
+tig00000742_pilon	14514
+tig00000743_pilon	501337
+tig00000744_pilon	6623
+tig00000745_pilon	15277
+tig00000746_pilon	22344
+tig00000747_pilon	32065
+tig00000748_pilon	14134
+tig00000749_pilon	23999
+tig00000750_pilon	27995
+tig00000751_pilon	13118
+tig00000752_pilon	16840
+tig00000753_pilon	218824
+tig00000754_pilon	629566
+tig00000755_pilon	120541
+tig00000756_pilon	1033084
+tig00000757_pilon	18197
+tig00000758_pilon	9253
+tig00000759_pilon	30275
+tig00000760_pilon	9077
+tig00000761_pilon	17718
+tig00000762_pilon	18565
+tig00000763_pilon	526972
+tig00000764_pilon	350289
+tig00000765_pilon	10251
+tig00000766_pilon	135946
+tig00000767_pilon	20515
+tig00000768_pilon	262094
+tig00000769_pilon	112798
+tig00000770_pilon	878746
+tig00000771_pilon	16210
+tig00000772_pilon	8959
+tig00000773_pilon	11872
+tig00000774_pilon	10980
+tig00000775_pilon	487844
+tig00000776_pilon	152619
+tig00000777_pilon	15980
+tig00000778_pilon	14274
+tig00000779_pilon	10155
+tig00000780_pilon	193756
+tig00000781_pilon	269510
+tig00000782_pilon	149981
+tig00000783_pilon	20971
+tig00000784_pilon	32487
+tig00000785_pilon	19050
+tig00000786_pilon	9467
+tig00000787_pilon	16324
+tig00000788_pilon	21087
+tig00000789_pilon	15908
+tig00000790_pilon	19373
+tig00000791_pilon	12243
+tig00000792_pilon	117034
+tig00000793_pilon	98673
+tig00000794_pilon	382523
+tig00000795_pilon	42695
+tig00000796_pilon	10809
+tig00000797_pilon	485536
+tig00000798_pilon	9234
+tig00000799_pilon	15213
+tig00000800_pilon	405510
+tig00000801_pilon	110554
+tig00000802_pilon	128972
+tig00000803_pilon	30057
+tig00000804_pilon	171665
+tig00000805_pilon	27800
+tig00000806_pilon	181304
+tig00000807_pilon	21280
+tig00000808_pilon	14066
+tig00000809_pilon	34134
+tig00000810_pilon	287425
+tig00000811_pilon	20684
+tig00000812_pilon	137765
+tig00000813_pilon	26320
+tig00000814_pilon	10936
+tig00000815_pilon	18786
+tig00000816_pilon	12386
+tig00000817_pilon	42288
+tig00000818_pilon	151361
+tig00000819_pilon	263237
+tig00000820_pilon	14601
+tig00000821_pilon	22662
+tig00000822_pilon	13516
+tig00000823_pilon	13420
+tig00000824_pilon	23062
+tig00000825_pilon	17024
+tig00000826_pilon	12946
+tig00000827_pilon	307671
+tig00000828_pilon	132270
+tig00000829_pilon	14599
+tig00000830_pilon	49058
+tig00000831_pilon	292233
+tig00000832_pilon	86948
+tig00000833_pilon	163929
+tig00000834_pilon	5808
+tig00000835_pilon	260825
+tig00000836_pilon	245811
+tig00000837_pilon	28265
+tig00000838_pilon	78095
+tig00000839_pilon	17445
+tig00000840_pilon	13601
+tig00000841_pilon	11340
+tig00000842_pilon	354884
+tig00000843_pilon	289878
+tig00000844_pilon	27070
+tig00000845_pilon	114795
+tig00000846_pilon	205430
+tig00000847_pilon	9693
+tig00000848_pilon	8633
+tig00000849_pilon	16733
+tig00000850_pilon	12505
+tig00000851_pilon	214076
+tig00000852_pilon	136139
+tig00000853_pilon	115658
+tig00000854_pilon	13274
+tig00000855_pilon	21994
+tig00000856_pilon	8966
+tig00000857_pilon	49304
+tig00000858_pilon	179029
+tig00000859_pilon	34695
+tig00000860_pilon	9759
+tig00000861_pilon	19117
+tig00000862_pilon	123680
+tig00000863_pilon	33682
+tig00000864_pilon	34964
+tig00000865_pilon	87620
+tig00000866_pilon	108788
+tig00000867_pilon	49099
+tig00000868_pilon	125419
+tig00000869_pilon	16598
+tig00000870_pilon	13854
+tig00000871_pilon	13594
+tig00000872_pilon	13332
+tig00000873_pilon	27994
+tig00000874_pilon	4995
+tig00000875_pilon	39224
+tig00000876_pilon	80666
+tig00000877_pilon	35328
+tig00000878_pilon	26917
+tig00000879_pilon	11966
+tig00000880_pilon	50312
+tig00000881_pilon	16199
+tig00000882_pilon	13847
+tig00000883_pilon	10061
+tig00000884_pilon	9581
+tig00000885_pilon	9656
+tig00000886_pilon	9673
+tig00000887_pilon	16316
+tig00000888_pilon	12056
+tig00000889_pilon	9765
+Genome sequence total length = 36814643
+Genome size with padding = 224395264
+!!!!! WARNING: --genomeSAindexNbases 14 is too large for the genome size=36814643, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 11
+Estimated genome size with padding and SJs: total=genome+SJ=425395264 = 224395264 + 201000000
+GstrandBit=32
+Number of SA indices: 73629286
+May 11 22:13:12 ... starting to sort Suffix Array. This may take a long time...
+Number of chunks: 8;   chunks size limit: 84147752 bytes
+May 11 22:13:13 ... sorting Suffix Array chunks and saving them to disk...
+Writing 15665872 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_7 ; empty space on disk = 2214392443752448 bytes ... done
+Writing 77863808 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_6 ; empty space on disk = 2214390181281792 bytes ... done
+Writing 81623456 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_0 ; empty space on disk = 2214390181281792 bytes ... done
+Writing 82315808 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_5 ; empty space on disk = 2214390181281792 bytes ...Writing 82586920 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_4 ; empty space on disk = 2214390181281792 bytes ... done
+ done
+Writing 83601744 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_2 ; empty space on disk = 2214390181281792 bytes ... done
+Writing 82365944 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_1 ; empty space on disk = 2214390181281792 bytes ... done
+Writing 83010736 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA_3 ; empty space on disk = 2214390181281792 bytes ... done
+May 11 22:13:21 ... loading chunks from disk, packing SA...
+May 11 22:13:22 ... finished generating suffix array
+May 11 22:13:22 ... generating Suffix Array index
+May 11 22:13:37 ... completed Suffix Array index
+May 11 22:13:37 ... writing Genome to disk ...
+Writing 224395264 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//Genome ; empty space on disk = 2214381543940096 bytes ... done
+SA size in bytes: 303720808
+May 11 22:13:37 ... writing Suffix Array to disk ...
+Writing 303720808 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SA ; empty space on disk = 2214381543940096 bytes ... done
+May 11 22:13:37 ... writing SAindex to disk
+Writing 8 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SAindex ; empty space on disk = 2214381543940096 bytes ... done
+Writing 120 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SAindex ; empty space on disk = 2214381543940096 bytes ... done
+Writing 1565873491 bytes into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping//SAindex ; empty space on disk = 2214381543940096 bytes ... done
+May 11 22:13:40 ..... finished successfully
+DONE: Genome generation, EXITING

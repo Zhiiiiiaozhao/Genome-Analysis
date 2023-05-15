@@ -10,5 +10,5 @@
 
 module load bioinfo-tools FastQC
 
-fastqc -o /home/leizhao/Genome_Analysis/results/FastQC  /home/leizhao/Genome_Analysis/data/raw_data/illumina_data/SRR6058604_scaffold_06.*P.fastq.gz
+fastqc -o /home/leizhao/Genome_Analysis/results/01_FastQC  /home/leizhao/Genome_Analysis/data/raw_data/illumina_data/SRR6058604_scaffold_06.*P.fastq.gz
 

@@ -1,0 +1,96 @@
++ cat /var/spool/slurmd/job7700402/slurm_script
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 2
+#SBATCH -t 00:30:00
+#SBATCH -J RNA_QC_bf
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lei.zhao.1300@student.uu.se
+
+set -x
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+module load bioinfo-tools  FastQC/0.11.9
+
+fastqc -o /home/leizhao/Genome_Analysis/results/07_FastQC_RNA_bf /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/untrimmed/SRR6040095_scaffold_06.*.fastq.gz 
+
++ echo USER = leizhao
+USER = leizhao
++ echo QOS = normal
+QOS = normal
++ module load bioinfo-tools FastQC/0.11.9
+++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools FastQC/0.11.9
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1\;FastQC/0.11.9:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:FastQC/0.11.9;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:1\;/sw/mf/snowy/bioinfo-tools/alignment:1\;/sw/mf/snowy/bioinfo-tools/assembly:1\;/sw/mf/snowy/bioinfo-tools/misc:1\;/sw/mf/snowy/bioinfo-tools/phylogeny:1\;/sw/mf/snowy/bioinfo-tools/pipelines:1\;/sw/mf/snowy/bioinfo-tools/sw_collections:1\;/sw/mf/snowy/applications:1\;/sw/mf/snowy/build-tools:1\;/sw/mf/snowy/compilers:1\;/sw/mf/snowy/data:1\;/sw/mf/snowy/environment:1\;/sw/mf/snowy/libraries:1\;/sw/mf/snowy/parallel:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/FastQC/0.11.9/snowy:1\;/home/leizhao/bin:2\;/usr/lib64/qt-3.3/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/thinlinc/bin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/FastQC/0.11.9/snowy:/home/leizhao/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin;' export 'PATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtGYXN0UUM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9GYXN0UUMvMC4xMS45IixbImZ1bGxOYW1lIl09IkZhc3RRQy8wLjExLjkiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJGYXN0UUMvMC4xMS45Iix9LFsiYmlvaW5mby10b29scyJdPXtbImZuIl09Ii9zdy9tZi9zbm93eS9lbnZpcm9ubWVudC9iaW9pbmZvLXRvb2xzIixbImZ1bGxOYW1lIl09ImJpb2luZm8tdG9vbHMiLFsi;' export '_ModuleTable001_;' '_ModuleTable002_=bG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW9pbmZvLXRvb2xzIix9LH0sbXBhdGhBPXsiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYW5ub3RhdGlvbiIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2FsaWdubWVudCIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fzc2VtYmx5IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BoeWxvZ2VueSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BpcGVsaW5lcyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3N3X2NvbGxlY3Rpb25zIiwiL3N3L21mL3Nu;' export '_ModuleTable002_;' '_ModuleTable003_=b3d5L2FwcGxpY2F0aW9ucyIsIi9zdy9tZi9zbm93eS9idWlsZC10b29scyIsIi9zdy9tZi9zbm93eS9jb21waWxlcnMiLCIvc3cvbWYvc25vd3kvZGF0YSIsIi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudCIsIi9zdy9tZi9zbm93eS9saWJyYXJpZXMiLCIvc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3N3L21mL3Nub3d5L2FwcGxpY2F0aW9uczovc3cvbWYvc25vd3kvYnVpbGQtdG9vbHM6L3N3L21mL3Nub3d5L2NvbXBpbGVyczovc3cvbWYvc25vd3kvZGF0YTovc3cvbWYvc25vd3kvZW52aXJvbm1lbnQ6L3N3L21mL3Nub3d5L2xpYnJhcmllczovc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0=;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1;FastQC/0.11.9:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:FastQC/0.11.9
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MODULEPATH='/sw/mf/snowy/bioinfo-tools/annotation:1;/sw/mf/snowy/bioinfo-tools/alignment:1;/sw/mf/snowy/bioinfo-tools/assembly:1;/sw/mf/snowy/bioinfo-tools/misc:1;/sw/mf/snowy/bioinfo-tools/phylogeny:1;/sw/mf/snowy/bioinfo-tools/pipelines:1;/sw/mf/snowy/bioinfo-tools/sw_collections:1;/sw/mf/snowy/applications:1;/sw/mf/snowy/build-tools:1;/sw/mf/snowy/compilers:1;/sw/mf/snowy/data:1;/sw/mf/snowy/environment:1;/sw/mf/snowy/libraries:1;/sw/mf/snowy/parallel:1'
+++ export __LMOD_REF_COUNT_MODULEPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/FastQC/0.11.9/snowy:1;/home/leizhao/bin:2;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/thinlinc/bin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/FastQC/0.11.9/snowy:/home/leizhao/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin
+++ export PATH
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/FastQC/0.11.9
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtGYXN0UUM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9GYXN0UUMvMC4xMS45IixbImZ1bGxOYW1lIl09IkZhc3RRQy8wLjExLjkiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJGYXN0UUMvMC4xMS45Iix9LFsiYmlvaW5mby10b29scyJdPXtbImZuIl09Ii9zdy9tZi9zbm93eS9lbnZpcm9ubWVudC9iaW9pbmZvLXRvb2xzIixbImZ1bGxOYW1lIl09ImJpb2luZm8tdG9vbHMiLFsi
+++ export _ModuleTable001_
+++ _ModuleTable002_=bG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW9pbmZvLXRvb2xzIix9LH0sbXBhdGhBPXsiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYW5ub3RhdGlvbiIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2FsaWdubWVudCIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fzc2VtYmx5IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BoeWxvZ2VueSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3BpcGVsaW5lcyIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL3N3X2NvbGxlY3Rpb25zIiwiL3N3L21mL3Nu
+++ export _ModuleTable002_
+++ _ModuleTable003_=b3d5L2FwcGxpY2F0aW9ucyIsIi9zdy9tZi9zbm93eS9idWlsZC10b29scyIsIi9zdy9tZi9zbm93eS9jb21waWxlcnMiLCIvc3cvbWYvc25vd3kvZGF0YSIsIi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudCIsIi9zdy9tZi9zbm93eS9saWJyYXJpZXMiLCIvc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0sWyJzeXN0ZW1CYXNlTVBBVEgiXT0iL3N3L21mL3Nub3d5L2FwcGxpY2F0aW9uczovc3cvbWYvc25vd3kvYnVpbGQtdG9vbHM6L3N3L21mL3Nub3d5L2NvbXBpbGVyczovc3cvbWYvc25vd3kvZGF0YTovc3cvbWYvc25vd3kvZW52aXJvbm1lbnQ6L3N3L21mL3Nub3d5L2xpYnJhcmllczovc3cvbWYvc25vd3kvcGFyYWxsZWwiLH0=
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ fastqc -o /home/leizhao/Genome_Analysis/results/07_FastQC_RNA_bf /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/untrimmed/SRR6040095_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/untrimmed/SRR6040095_scaffold_06.2.fastq.gz
+Started analysis of SRR6040095_scaffold_06.1.fastq.gz
+Approx 5% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 10% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 15% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 20% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 25% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 30% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 35% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 40% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 45% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 50% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 55% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 60% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 65% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 70% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 75% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 80% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 85% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 90% complete for SRR6040095_scaffold_06.1.fastq.gz
+Approx 95% complete for SRR6040095_scaffold_06.1.fastq.gz
+Analysis complete for SRR6040095_scaffold_06.1.fastq.gz
+Started analysis of SRR6040095_scaffold_06.2.fastq.gz
+Approx 5% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 10% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 15% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 20% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 25% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 30% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 35% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 40% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 45% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 50% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 55% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 60% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 65% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 70% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 75% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 80% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 85% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 90% complete for SRR6040095_scaffold_06.2.fastq.gz
+Approx 95% complete for SRR6040095_scaffold_06.2.fastq.gz
+Analysis complete for SRR6040095_scaffold_06.2.fastq.gz

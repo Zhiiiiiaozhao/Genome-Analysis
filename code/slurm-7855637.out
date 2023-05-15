@@ -1,0 +1,467 @@
++ cat /var/spool/slurmd/job7855637/slurm_script
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 4
+#SBATCH -t 24:00:00
+#SBATCH -J DNA_assembly_masking
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lei.zhao.1300@student.uu.se
+
+set -x
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+module load bioinfo-tools 
+module load RepeatModeler
+module load RepeatMasker
+
+BuildDatabase -name mySpecies /home/leizhao/Genome_Analysis/results/04_Pilon_DNA_assembly_polish/DNA_assembly_polish_Pilon.fasta
+RepeatModeler -database mySpecies -pa 4
+
+RepeatMasker -pa 4 -xsmall -lib mySpecies-families.fa -dir /proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking /home/leizhao/Genome_Analysis/results/04_Pilon_DNA_assembly_polish/DNA_assembly_polish_Pilon.fasta
+
++ echo USER = leizhao
+USER = leizhao
++ echo QOS = normal
+QOS = normal
++ module load bioinfo-tools
+++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools
++ eval '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;RepeatModeler/2.0.3:1\;perl/5.26.2:1\;perl_modules/5.26.2:1\;python/3.7.2:1\;RepeatMasker/4.1.2-p1:1\;bioinfo-tools:2;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:RepeatModeler/2.0.3:perl/5.26.2:perl_modules/5.26.2:python/3.7.2:RepeatMasker/4.1.2-p1:bioinfo-tools;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:1\;/sw/mf/snowy/bioinfo-tools/alignment:1\;/sw/mf/snowy/bioinfo-tools/assembly:1\;/sw/mf/snowy/bioinfo-tools/misc:1\;/sw/mf/snowy/bioinfo-tools/phylogeny:1\;/sw/mf/snowy/bioinfo-tools/pipelines:1\;/sw/mf/snowy/bioinfo-tools/sw_collections:1\;/sw/mf/snowy/applications:1\;/sw/mf/snowy/build-tools:1\;/sw/mf/snowy/compilers:1\;/sw/mf/snowy/data:1\;/sw/mf/snowy/environment:1\;/sw/mf/snowy/libraries:1\;/sw/mf/snowy/parallel:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv;' export '_ModuleTable001_;' '_ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI;' export '_ModuleTable002_;' '_ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable003_;' '_ModuleTable_Sz_=3;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;RepeatModeler/2.0.3:1;perl/5.26.2:1;perl_modules/5.26.2:1;python/3.7.2:1;RepeatMasker/4.1.2-p1:1;bioinfo-tools:2'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:RepeatModeler/2.0.3:perl/5.26.2:perl_modules/5.26.2:python/3.7.2:RepeatMasker/4.1.2-p1:bioinfo-tools
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MODULEPATH='/sw/mf/snowy/bioinfo-tools/annotation:1;/sw/mf/snowy/bioinfo-tools/alignment:1;/sw/mf/snowy/bioinfo-tools/assembly:1;/sw/mf/snowy/bioinfo-tools/misc:1;/sw/mf/snowy/bioinfo-tools/phylogeny:1;/sw/mf/snowy/bioinfo-tools/pipelines:1;/sw/mf/snowy/bioinfo-tools/sw_collections:1;/sw/mf/snowy/applications:1;/sw/mf/snowy/build-tools:1;/sw/mf/snowy/compilers:1;/sw/mf/snowy/data:1;/sw/mf/snowy/environment:1;/sw/mf/snowy/libraries:1;/sw/mf/snowy/parallel:1'
+++ export __LMOD_REF_COUNT_MODULEPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cv
+++ export _ModuleTable001_
+++ _ModuleTable002_=bWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRI
+++ export _ModuleTable002_
+++ _ModuleTable003_=Il09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable003_
+++ _ModuleTable_Sz_=3
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load RepeatModeler
+++ /usr/share/lmod/lmod/libexec/lmod bash load RepeatModeler
++ eval '__LMOD_REF_COUNT_LD_LIBRARY_PATH=/sw/comp/perl_modules/5.26.2/snowy/lib:1\;/sw/libs/wxWidgets/lib:1\;/sw/comp/perl_modules/5.26.2/rackham/lib:1;' export '__LMOD_REF_COUNT_LD_LIBRARY_PATH;' 'LD_LIBRARY_PATH=/sw/comp/perl_modules/5.26.2/snowy/lib:/sw/libs/wxWidgets/lib:/sw/comp/perl_modules/5.26.2/rackham/lib;' export 'LD_LIBRARY_PATH;' '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;python/3.7.2:1\;RepeatMasker/4.1.2-p1:1\;bioinfo-tools:2\;perl/5.26.2:2\;perl_modules/5.26.2:2\;RepeatModeler/2.0.3:2;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:python/3.7.2:RepeatMasker/4.1.2-p1:bioinfo-tools:perl/5.26.2:perl_modules/5.26.2:RepeatModeler/2.0.3;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH=/sw/comp/perl/5.26.2/snowy/man:1\;/sw/comp/python/3.7.2_rackham/share/man:1\;/sw/comp/perl/5.26.2/rackham/man:1\;/usr/share/man:2\;/sw/uppmax/man:2\;/opt/thinlinc/share/man:2\;/sw/comp/perl_modules/5.26.2/rackham/man:1\;/sw/comp/perl_modules/5.26.2/snowy/man:1;' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH=/sw/comp/perl/5.26.2/snowy/man:/sw/comp/python/3.7.2_rackham/share/man:/sw/comp/perl/5.26.2/rackham/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.26.2/rackham/man:/sw/comp/perl_modules/5.26.2/snowy/man;' export 'MANPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/RepeatModeler/2.0.3/snowy:1\;/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:1\;/sw/comp/perl_modules/5.26.2/snowy/bin:1\;/sw/comp/perl/5.26.2/snowy/bin:1\;/home/leizhao/bin:2\;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:1\;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:1\;/sw/comp/python/3.7.2_rackham/bin:1\;/sw/comp/perl_modules/5.26.2/rackham/bin:1\;/sw/comp/perl/5.26.2/rackham/bin:1\;/sw/bioinfo/RepeatModeler/2.0.3/rackham:1\;/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:1\;/usr/lib64/qt-3.3/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/thinlinc/bin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/RepeatModeler/2.0.3/snowy:/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:/sw/comp/perl_modules/5.26.2/snowy/bin:/sw/comp/perl/5.26.2/snowy/bin:/home/leizhao/bin:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:/sw/comp/python/3.7.2_rackham/bin:/sw/comp/perl_modules/5.26.2/rackham/bin:/sw/comp/perl/5.26.2/rackham/bin:/sw/bioinfo/RepeatModeler/2.0.3/rackham:/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin;' export 'PATH;' '__LMOD_REF_COUNT_PERL5LIB=/sw/comp/perl_modules/5.26.2/snowy/lib/perl5:1\;/sw/comp/perl_modules/5.26.2/snowy/lib/perl5/x86_64-linux-thread-multi:1\;/sw/comp/perl/5.26.2/snowy/lib:1\;/sw/comp/perl_modules/5.26.2/rackham/lib/perl5:1\;/sw/comp/perl_modules/5.26.2/rackham/lib/perl5/x86_64-linux-thread-multi:1\;/sw/comp/perl/5.26.2/rackham/lib:1;' export '__LMOD_REF_COUNT_PERL5LIB;' 'PERL5LIB=/sw/comp/perl_modules/5.26.2/snowy/lib/perl5:/sw/comp/perl_modules/5.26.2/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/snowy/lib:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/rackham/lib;' export 'PERL5LIB;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/compilers/perl/5.26.2:1\;/sw/mf/snowy/compilers/perl_modules/5.26.2:1\;/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/compilers/perl/5.26.2:/sw/mf/snowy/compilers/perl_modules/5.26.2:/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtSZXBlYXRNb2RlbGVyPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvUmVwZWF0TW9kZWxlci8yLjAuMyIsWyJmdWxsTmFtZSJdPSJSZXBlYXRNb2RlbGVyLzIuMC4zIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iUmVwZWF0TW9kZWxlciIsfSxbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJd;' export '_ModuleTable001_;' '_ModuleTable002_=PSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxwZXJsPXtbImZuIl09Ii9zdy9tZi9zbm93eS9jb21waWxlcnMvcGVybC81LjI2LjIiLFsiZnVsbE5hbWUiXT0icGVybC81LjI2LjIiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icGVybC81LjI2LjIiLH0scGVybF9tb2R1bGVzPXtbImZuIl09Ii9zdy9tZi9zbm93eS9jb21waWxlcnMvcGVybF9tb2R1bGVzLzUuMjYuMiIsWyJmdWxsTmFtZSJdPSJwZXJsX21vZHVs;' export '_ModuleTable002_;' '_ModuleTable003_=ZXMvNS4yNi4yIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icGVybF9tb2R1bGVzLzUuMjYuMiIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xs;' export '_ModuleTable003_;' '_ModuleTable004_=ZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable004_;' '_ModuleTable_Sz_=4;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LD_LIBRARY_PATH='/sw/comp/perl_modules/5.26.2/snowy/lib:1;/sw/libs/wxWidgets/lib:1;/sw/comp/perl_modules/5.26.2/rackham/lib:1'
+++ export __LMOD_REF_COUNT_LD_LIBRARY_PATH
+++ LD_LIBRARY_PATH=/sw/comp/perl_modules/5.26.2/snowy/lib:/sw/libs/wxWidgets/lib:/sw/comp/perl_modules/5.26.2/rackham/lib
+++ export LD_LIBRARY_PATH
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;python/3.7.2:1;RepeatMasker/4.1.2-p1:1;bioinfo-tools:2;perl/5.26.2:2;perl_modules/5.26.2:2;RepeatModeler/2.0.3:2'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:python/3.7.2:RepeatMasker/4.1.2-p1:bioinfo-tools:perl/5.26.2:perl_modules/5.26.2:RepeatModeler/2.0.3
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MANPATH='/sw/comp/perl/5.26.2/snowy/man:1;/sw/comp/python/3.7.2_rackham/share/man:1;/sw/comp/perl/5.26.2/rackham/man:1;/usr/share/man:2;/sw/uppmax/man:2;/opt/thinlinc/share/man:2;/sw/comp/perl_modules/5.26.2/rackham/man:1;/sw/comp/perl_modules/5.26.2/snowy/man:1'
+++ export __LMOD_REF_COUNT_MANPATH
+++ MANPATH=/sw/comp/perl/5.26.2/snowy/man:/sw/comp/python/3.7.2_rackham/share/man:/sw/comp/perl/5.26.2/rackham/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.26.2/rackham/man:/sw/comp/perl_modules/5.26.2/snowy/man
+++ export MANPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/RepeatModeler/2.0.3/snowy:1;/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:1;/sw/comp/perl_modules/5.26.2/snowy/bin:1;/sw/comp/perl/5.26.2/snowy/bin:1;/home/leizhao/bin:2;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:1;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:1;/sw/comp/python/3.7.2_rackham/bin:1;/sw/comp/perl_modules/5.26.2/rackham/bin:1;/sw/comp/perl/5.26.2/rackham/bin:1;/sw/bioinfo/RepeatModeler/2.0.3/rackham:1;/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/thinlinc/bin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/RepeatModeler/2.0.3/snowy:/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:/sw/comp/perl_modules/5.26.2/snowy/bin:/sw/comp/perl/5.26.2/snowy/bin:/home/leizhao/bin:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:/sw/comp/python/3.7.2_rackham/bin:/sw/comp/perl_modules/5.26.2/rackham/bin:/sw/comp/perl/5.26.2/rackham/bin:/sw/bioinfo/RepeatModeler/2.0.3/rackham:/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin
+++ export PATH
+++ __LMOD_REF_COUNT_PERL5LIB='/sw/comp/perl_modules/5.26.2/snowy/lib/perl5:1;/sw/comp/perl_modules/5.26.2/snowy/lib/perl5/x86_64-linux-thread-multi:1;/sw/comp/perl/5.26.2/snowy/lib:1;/sw/comp/perl_modules/5.26.2/rackham/lib/perl5:1;/sw/comp/perl_modules/5.26.2/rackham/lib/perl5/x86_64-linux-thread-multi:1;/sw/comp/perl/5.26.2/rackham/lib:1'
+++ export __LMOD_REF_COUNT_PERL5LIB
+++ PERL5LIB=/sw/comp/perl_modules/5.26.2/snowy/lib/perl5:/sw/comp/perl_modules/5.26.2/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/snowy/lib:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/rackham/lib
+++ export PERL5LIB
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/compilers/perl/5.26.2:1;/sw/mf/snowy/compilers/perl_modules/5.26.2:1;/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/compilers/perl/5.26.2:/sw/mf/snowy/compilers/perl_modules/5.26.2:/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtSZXBlYXRNb2RlbGVyPXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvUmVwZWF0TW9kZWxlci8yLjAuMyIsWyJmdWxsTmFtZSJdPSJSZXBlYXRNb2RlbGVyLzIuMC4zIixbImxvYWRPcmRlciJdPTQscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iUmVwZWF0TW9kZWxlciIsfSxbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJd
+++ export _ModuleTable001_
+++ _ModuleTable002_=PSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxwZXJsPXtbImZuIl09Ii9zdy9tZi9zbm93eS9jb21waWxlcnMvcGVybC81LjI2LjIiLFsiZnVsbE5hbWUiXT0icGVybC81LjI2LjIiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInJlZl9jb3VudCJdPTEsWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icGVybC81LjI2LjIiLH0scGVybF9tb2R1bGVzPXtbImZuIl09Ii9zdy9tZi9zbm93eS9jb21waWxlcnMvcGVybF9tb2R1bGVzLzUuMjYuMiIsWyJmdWxsTmFtZSJdPSJwZXJsX21vZHVs
+++ export _ModuleTable002_
+++ _ModuleTable003_=ZXMvNS4yNi4yIixbImxvYWRPcmRlciJdPTMscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icGVybF9tb2R1bGVzLzUuMjYuMiIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xs
+++ export _ModuleTable003_
+++ _ModuleTable004_=ZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable004_
+++ _ModuleTable_Sz_=4
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ module load RepeatMasker
+++ /usr/share/lmod/lmod/libexec/lmod bash load RepeatMasker
++ eval '__LMOD_REF_COUNT_LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:2\;/sw/comp/perl_modules/5.26.2/snowy/lib:1\;/sw/comp/perl_modules/5.26.2/rackham/lib:1;' export '__LMOD_REF_COUNT_LD_LIBRARY_PATH;' 'LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:/sw/comp/perl_modules/5.26.2/snowy/lib:/sw/comp/perl_modules/5.26.2/rackham/lib;' export 'LD_LIBRARY_PATH;' '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:2\;RepeatModeler/2.0.3:2\;perl/5.26.2:1\;perl_modules/5.26.2:1\;python/3.7.2:2\;RepeatMasker/4.1.2-p1:2;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:RepeatModeler/2.0.3:perl/5.26.2:perl_modules/5.26.2:python/3.7.2:RepeatMasker/4.1.2-p1;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH=/sw/comp/python/3.7.2_snowy/share/man:1\;/sw/comp/perl/5.26.2/snowy/man:1\;/sw/comp/python/3.7.2_rackham/share/man:1\;/sw/comp/perl/5.26.2/rackham/man:1\;/usr/share/man:2\;/sw/uppmax/man:2\;/opt/thinlinc/share/man:2\;/sw/comp/perl_modules/5.26.2/rackham/man:1\;/sw/comp/perl_modules/5.26.2/snowy/man:1;' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH=/sw/comp/python/3.7.2_snowy/share/man:/sw/comp/perl/5.26.2/snowy/man:/sw/comp/python/3.7.2_rackham/share/man:/sw/comp/perl/5.26.2/rackham/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.26.2/rackham/man:/sw/comp/perl_modules/5.26.2/snowy/man;' export 'MANPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy/util:1\;/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy:1\;/sw/comp/python/3.7.2_snowy/bin:1\;/sw/comp/perl_modules/5.26.2/snowy/bin:1\;/sw/comp/perl/5.26.2/snowy/bin:1\;/sw/bioinfo/RepeatModeler/2.0.3/snowy:1\;/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:1\;/home/leizhao/bin:2\;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:1\;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:1\;/sw/comp/python/3.7.2_rackham/bin:1\;/sw/comp/perl_modules/5.26.2/rackham/bin:1\;/sw/comp/perl/5.26.2/rackham/bin:1\;/sw/bioinfo/RepeatModeler/2.0.3/rackham:1\;/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:1\;/usr/lib64/qt-3.3/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/thinlinc/bin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy/util:/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy:/sw/comp/python/3.7.2_snowy/bin:/sw/comp/perl_modules/5.26.2/snowy/bin:/sw/comp/perl/5.26.2/snowy/bin:/sw/bioinfo/RepeatModeler/2.0.3/snowy:/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:/home/leizhao/bin:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:/sw/comp/python/3.7.2_rackham/bin:/sw/comp/perl_modules/5.26.2/rackham/bin:/sw/comp/perl/5.26.2/rackham/bin:/sw/bioinfo/RepeatModeler/2.0.3/rackham:/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin;' export 'PATH;' 'PERL5LIB=/sw/comp/perl_modules/5.26.2/snowy/lib/perl5:/sw/comp/perl_modules/5.26.2/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/snowy/lib:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/rackham/lib;' export 'PERL5LIB;' '__LMOD_REF_COUNT_PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig:1\;/sw/comp/python/3.7.2_rackham/lib/pkgconfig:1;' export '__LMOD_REF_COUNT_PKG_CONFIG_PATH;' 'PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig:/sw/comp/python/3.7.2_rackham/lib/pkgconfig;' export 'PKG_CONFIG_PATH;' 'PYTHON_ROOT=/sw/comp/python/3.7.2_snowy;' export 'PYTHON_ROOT;' 'REPEATMASKER_ROOT=/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy;' export 'REPEATMASKER_ROOT;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3:1\;/sw/mf/snowy/compilers/perl/5.26.2:1\;/sw/mf/snowy/compilers/perl_modules/5.26.2:1\;/sw/mf/snowy/compilers/python/3.7.2:1\;/sw/mf/snowy/bioinfo-tools/annotation/RepeatMasker/4.1.2-p1:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3:/sw/mf/snowy/compilers/perl/5.26.2:/sw/mf/snowy/compilers/perl_modules/5.26.2:/sw/mf/snowy/compilers/python/3.7.2:/sw/mf/snowy/bioinfo-tools/annotation/RepeatMasker/4.1.2-p1;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtSZXBlYXRNYXNrZXI9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYW5ub3RhdGlvbi9SZXBlYXRNYXNrZXIvNC4xLjItcDEiLFsiZnVsbE5hbWUiXT0iUmVwZWF0TWFza2VyLzQuMS4yLXAxIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iUmVwZWF0TWFza2VyIix9LFJlcGVhdE1vZGVsZXI9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9SZXBlYXRNb2RlbGVyLzIu;' export '_ModuleTable001_;' '_ModuleTable002_=MC4zIixbImZ1bGxOYW1lIl09IlJlcGVhdE1vZGVsZXIvMi4wLjMiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJSZXBlYXRNb2RlbGVyIix9LFsiYmlvaW5mby10b29scyJdPXtbImZuIl09Ii9zdy9tZi9zbm93eS9lbnZpcm9ubWVudC9iaW9pbmZvLXRvb2xzIixbImZ1bGxOYW1lIl09ImJpb2luZm8tdG9vbHMiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW9pbmZvLXRvb2xzIix9LHBlcmw9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsLzUuMjYuMiIsWyJmdWxsTmFtZSJd;' export '_ModuleTable002_;' '_ModuleTable003_=PSJwZXJsLzUuMjYuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsLzUuMjYuMiIsfSxwZXJsX21vZHVsZXM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsX21vZHVsZXMvNS4yNi4yIixbImZ1bGxOYW1lIl09InBlcmxfbW9kdWxlcy81LjI2LjIiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsX21vZHVsZXMvNS4yNi4yIix9LHB5dGhvbj17WyJmbiJdPSIvc3cvbWYvc25vd3kvY29tcGlsZXJzL3B5dGhvbi8zLjcuMiIsWyJmdWxsTmFt;' export '_ModuleTable003_;' '_ModuleTable004_=ZSJdPSJweXRob24vMy43LjIiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJweXRob24vMy43LjIiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNzZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29s;' export '_ModuleTable004_;' '_ModuleTable005_=bGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==;' export '_ModuleTable005_;' '_ModuleTable_Sz_=5;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LD_LIBRARY_PATH='/sw/libs/wxWidgets/lib:2;/sw/comp/perl_modules/5.26.2/snowy/lib:1;/sw/comp/perl_modules/5.26.2/rackham/lib:1'
+++ export __LMOD_REF_COUNT_LD_LIBRARY_PATH
+++ LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:/sw/comp/perl_modules/5.26.2/snowy/lib:/sw/comp/perl_modules/5.26.2/rackham/lib
+++ export LD_LIBRARY_PATH
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:2;RepeatModeler/2.0.3:2;perl/5.26.2:1;perl_modules/5.26.2:1;python/3.7.2:2;RepeatMasker/4.1.2-p1:2'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:RepeatModeler/2.0.3:perl/5.26.2:perl_modules/5.26.2:python/3.7.2:RepeatMasker/4.1.2-p1
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MANPATH='/sw/comp/python/3.7.2_snowy/share/man:1;/sw/comp/perl/5.26.2/snowy/man:1;/sw/comp/python/3.7.2_rackham/share/man:1;/sw/comp/perl/5.26.2/rackham/man:1;/usr/share/man:2;/sw/uppmax/man:2;/opt/thinlinc/share/man:2;/sw/comp/perl_modules/5.26.2/rackham/man:1;/sw/comp/perl_modules/5.26.2/snowy/man:1'
+++ export __LMOD_REF_COUNT_MANPATH
+++ MANPATH=/sw/comp/python/3.7.2_snowy/share/man:/sw/comp/perl/5.26.2/snowy/man:/sw/comp/python/3.7.2_rackham/share/man:/sw/comp/perl/5.26.2/rackham/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man:/sw/comp/perl_modules/5.26.2/rackham/man:/sw/comp/perl_modules/5.26.2/snowy/man
+++ export MANPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy/util:1;/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy:1;/sw/comp/python/3.7.2_snowy/bin:1;/sw/comp/perl_modules/5.26.2/snowy/bin:1;/sw/comp/perl/5.26.2/snowy/bin:1;/sw/bioinfo/RepeatModeler/2.0.3/snowy:1;/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:1;/home/leizhao/bin:2;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:1;/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:1;/sw/comp/python/3.7.2_rackham/bin:1;/sw/comp/perl_modules/5.26.2/rackham/bin:1;/sw/comp/perl/5.26.2/rackham/bin:1;/sw/bioinfo/RepeatModeler/2.0.3/rackham:1;/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:1;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/thinlinc/bin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy/util:/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy:/sw/comp/python/3.7.2_snowy/bin:/sw/comp/perl_modules/5.26.2/snowy/bin:/sw/comp/perl/5.26.2/snowy/bin:/sw/bioinfo/RepeatModeler/2.0.3/snowy:/sw/bioinfo/RepeatModeler/2.0.3/snowy/util:/home/leizhao/bin:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham/util:/sw/bioinfo/RepeatMasker/4.1.2-p1/rackham:/sw/comp/python/3.7.2_rackham/bin:/sw/comp/perl_modules/5.26.2/rackham/bin:/sw/comp/perl/5.26.2/rackham/bin:/sw/bioinfo/RepeatModeler/2.0.3/rackham:/sw/bioinfo/RepeatModeler/2.0.3/rackham/util:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin
+++ export PATH
+++ PERL5LIB=/sw/comp/perl_modules/5.26.2/snowy/lib/perl5:/sw/comp/perl_modules/5.26.2/snowy/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/snowy/lib:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5:/sw/comp/perl_modules/5.26.2/rackham/lib/perl5/x86_64-linux-thread-multi:/sw/comp/perl/5.26.2/rackham/lib
+++ export PERL5LIB
+++ __LMOD_REF_COUNT_PKG_CONFIG_PATH='/sw/comp/python/3.7.2_snowy/lib/pkgconfig:1;/sw/comp/python/3.7.2_rackham/lib/pkgconfig:1'
+++ export __LMOD_REF_COUNT_PKG_CONFIG_PATH
+++ PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig:/sw/comp/python/3.7.2_rackham/lib/pkgconfig
+++ export PKG_CONFIG_PATH
+++ PYTHON_ROOT=/sw/comp/python/3.7.2_snowy
+++ export PYTHON_ROOT
+++ REPEATMASKER_ROOT=/sw/bioinfo/RepeatMasker/4.1.2-p1/snowy
+++ export REPEATMASKER_ROOT
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3:1;/sw/mf/snowy/compilers/perl/5.26.2:1;/sw/mf/snowy/compilers/perl_modules/5.26.2:1;/sw/mf/snowy/compilers/python/3.7.2:1;/sw/mf/snowy/bioinfo-tools/annotation/RepeatMasker/4.1.2-p1:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/bioinfo-tools/misc/RepeatModeler/2.0.3:/sw/mf/snowy/compilers/perl/5.26.2:/sw/mf/snowy/compilers/perl_modules/5.26.2:/sw/mf/snowy/compilers/python/3.7.2:/sw/mf/snowy/bioinfo-tools/annotation/RepeatMasker/4.1.2-p1
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtSZXBlYXRNYXNrZXI9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYW5ub3RhdGlvbi9SZXBlYXRNYXNrZXIvNC4xLjItcDEiLFsiZnVsbE5hbWUiXT0iUmVwZWF0TWFza2VyLzQuMS4yLXAxIixbImxvYWRPcmRlciJdPTYscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iUmVwZWF0TWFza2VyIix9LFJlcGVhdE1vZGVsZXI9e1siZm4iXT0iL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvbWlzYy9SZXBlYXRNb2RlbGVyLzIu
+++ export _ModuleTable001_
+++ _ModuleTable002_=MC4zIixbImZ1bGxOYW1lIl09IlJlcGVhdE1vZGVsZXIvMi4wLjMiLFsibG9hZE9yZGVyIl09Mixwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJSZXBlYXRNb2RlbGVyIix9LFsiYmlvaW5mby10b29scyJdPXtbImZuIl09Ii9zdy9tZi9zbm93eS9lbnZpcm9ubWVudC9iaW9pbmZvLXRvb2xzIixbImZ1bGxOYW1lIl09ImJpb2luZm8tdG9vbHMiLFsibG9hZE9yZGVyIl09MSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJiaW9pbmZvLXRvb2xzIix9LHBlcmw9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsLzUuMjYuMiIsWyJmdWxsTmFtZSJd
+++ export _ModuleTable002_
+++ _ModuleTable003_=PSJwZXJsLzUuMjYuMiIsWyJsb2FkT3JkZXIiXT0zLHByb3BUPXt9LFsicmVmX2NvdW50Il09MSxbInN0YWNrRGVwdGgiXT0yLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsLzUuMjYuMiIsfSxwZXJsX21vZHVsZXM9e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9wZXJsX21vZHVsZXMvNS4yNi4yIixbImZ1bGxOYW1lIl09InBlcmxfbW9kdWxlcy81LjI2LjIiLFsibG9hZE9yZGVyIl09NCxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJwZXJsX21vZHVsZXMvNS4yNi4yIix9LHB5dGhvbj17WyJmbiJdPSIvc3cvbWYvc25vd3kvY29tcGlsZXJzL3B5dGhvbi8zLjcuMiIsWyJmdWxsTmFt
+++ export _ModuleTable003_
+++ _ModuleTable004_=ZSJdPSJweXRob24vMy43LjIiLFsibG9hZE9yZGVyIl09NSxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0xLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJweXRob24vMy43LjIiLH0sfSxtcGF0aEE9eyIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbm5vdGF0aW9uIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYWxpZ25tZW50IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvYXNzZW1ibHkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9taXNjIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGh5bG9nZW55IiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvcGlwZWxpbmVzIiwiL3N3L21mL3Nub3d5L2Jpb2luZm8tdG9vbHMvc3dfY29s
+++ export _ModuleTable004_
+++ _ModuleTable005_=bGVjdGlvbnMiLCIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zIiwiL3N3L21mL3Nub3d5L2J1aWxkLXRvb2xzIiwiL3N3L21mL3Nub3d5L2NvbXBpbGVycyIsIi9zdy9tZi9zbm93eS9kYXRhIiwiL3N3L21mL3Nub3d5L2Vudmlyb25tZW50IiwiL3N3L21mL3Nub3d5L2xpYnJhcmllcyIsIi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfSxbInN5c3RlbUJhc2VNUEFUSCJdPSIvc3cvbWYvc25vd3kvYXBwbGljYXRpb25zOi9zdy9tZi9zbm93eS9idWlsZC10b29sczovc3cvbWYvc25vd3kvY29tcGlsZXJzOi9zdy9tZi9zbm93eS9kYXRhOi9zdy9tZi9zbm93eS9lbnZpcm9ubWVudDovc3cvbWYvc25vd3kvbGlicmFyaWVzOi9zdy9tZi9zbm93eS9wYXJhbGxlbCIsfQ==
+++ export _ModuleTable005_
+++ _ModuleTable_Sz_=5
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ BuildDatabase -name mySpecies /home/leizhao/Genome_Analysis/results/04_Pilon_DNA_assembly_polish/DNA_assembly_polish_Pilon.fasta
+Building database mySpecies:
+  Reading /home/leizhao/Genome_Analysis/results/04_Pilon_DNA_assembly_polish/DNA_assembly_polish_Pilon.fasta...
+Number of sequences (bp) added to database: 804 ( 36814643 bp )
++ RepeatModeler -database mySpecies -pa 4
+RepeatModeler Version 2.0.3
+===========================
+Using output directory = /domus/h1/leizhao/Genome_Analysis/code/RM_52809.ThuMay111410592023
+Search Engine = rmblast 2.10.0+
+Dependencies: TRF 4.09, RECON , RepeatScout 1.0.6, RepeatMasker 4.1.2
+LTR Structural Analysis: Disabled [use -LTRStruct to enable]
+Random Number Seed: 1683807059
+Database = mySpecies .
+  - Sequences = 804
+  - Bases = 36814643
+  - N50 = 245811
+  - Contig Histogram:
+  Size(bp)                                                        Count
+  -----------------------------------------------------------------------
+  1169218-1252632 |                                                   [ 1 ]
+  1085805-1169218 |                                                   [  ]
+  1002392-1085805 |                                                   [ 1 ]
+  918979-1002392  |                                                   [  ]
+  835566-918979   |                                                   [ 2 ]
+  752153-835566   |                                                   [ 2 ]
+  668740-752153   |                                                   [  ]
+  585327-668740   |                                                   [ 3 ]
+  501914-585327   |                                                   [ 3 ]
+  418501-501914   |                                                   [ 4 ]
+  335088-418501   |                                                   [ 7 ]
+  251675-335088   |*                                                  [ 16 ]
+  168262-251675   |*                                                  [ 18 ]
+  84849-168262    |*                                                  [ 27 ]
+  1436-84849      |************************************************** [ 720 ]
+
+Storage Throughput = poor ( 106.02 MB/s )
+  - NOTE: Poor storage througput will have a large impact on RepeatModeler
+          performance.  The low throughput observed above may be due to
+          transient usage patterns on the system and may not reflect the
+          actual system performance. Whenever possible run RepeatModeler
+          in a directory stored on a fast local disk and not over a
+          network filesytem.
+
+Ready to start the sampling process.
+INFO: The runtime of RepeatModeler heavily depends on the quality of the assembly
+      and the repetitive content of the sequences.  It is not imperative
+      that RepeatModeler completes all rounds in order to obtain useful
+      results.  At the completion of each round, the files ( consensi.fa, and
+      families.stk ) found in:
+      /domus/h1/leizhao/Genome_Analysis/code/RM_52809.ThuMay111410592023/ 
+      will contain all results produced thus far. These files may be 
+      manually copied and run through RepeatClassifier should the program
+      be terminated early.
+
+
+RepeatModeler Round # 1
+========================
+Searching for Repeats
+ -- Sampling from the database...
+   - Gathering up to 40000000 bp
+   - Final Sample Size = 36814612 bp ( 36814612 non ambiguous )
+   - Num Contigs Represented = 804
+   - Sequence extraction : 00:00:05 (hh:mm:ss) Elapsed Time
+ -- Running RepeatScout on the sequences...
+   - RepeatScout: Running build_lmer_table ( l = 14 )..
+   - RepeatScout: Running RepeatScout.. : 2984 raw families identified
+   - RepeatScout: Running filtering stage.. 2683 families remaining
+   - RepeatScout: 00:11:16 (hh:mm:ss) Elapsed Time
+   - Large Satellite Filtering.. : 5 found in 00:01:42 (hh:mm:ss) Elapsed Time
+   - Collecting repeat instances...
+ -- Refining Family R=178 / 0 ( RS Elements: 7100, Using 100 )
+ -- Refining Family R=0 / 1 ( RS Elements: 5053, Using 100 )
+ -- Refining Family R=110 / 2 ( RS Elements: 3808, Using 100 )
+ -- Refining Family R=6 / 3 ( RS Elements: 2939, Using 100 )
+ -- Refining Family R=468 / 4 ( RS Elements: 2764, Using 100 )
+ -- Refining Family R=1037 / 5 ( RS Elements: 2728, Using 100 )
+ -- Refining Family R=169 / 6 ( RS Elements: 2186, Using 100 )
+ -- Refining Family R=58 / 7 ( RS Elements: 2167, Using 100 )
+ -- Refining Family R=517 / 8 ( RS Elements: 2039, Using 100 )
+ -- Refining Family R=26 / 9 ( RS Elements: 1885, Using 100 )
+ -- Refining Family R=81 / 10 ( RS Elements: 1872, Using 100 )
+ -- Refining Family R=914 / 11 ( RS Elements: 1830, Using 100 )
+ -- Refining Family R=131 / 12 ( RS Elements: 1786, Using 100 )
+ -- Refining Family R=140 / 13 ( RS Elements: 1659, Using 100 )
+ -- Refining Family R=56 / 14 ( RS Elements: 1611, Using 100 )
+ -- Refining Family R=148 / 15 ( RS Elements: 1591, Using 100 )
+ -- Refining Family R=533 / 16 ( RS Elements: 1582, Using 100 )
+ -- Refining Family R=1167 / 17 ( RS Elements: 1549, Using 100 )
+ -- Refining Family R=518 / 18 ( RS Elements: 1523, Using 100 )
+ -- Refining Family R=27 / 19 ( RS Elements: 1476, Using 100 )
+ -- Refining Family R=244 / 20 ( RS Elements: 1415, Using 100 )
+ -- Refining Family R=216 / 21 ( RS Elements: 1401, Using 100 )
+ -- Refining Family R=581 / 22 ( RS Elements: 1348, Using 100 )
+ -- Refining Family R=1068 / 23 ( RS Elements: 1344, Using 100 )
+ -- Refining Family R=319 / 24 ( RS Elements: 1324, Using 100 )
+ -- Refining Family R=428 / 25 ( RS Elements: 1323, Using 100 )
+ -- Refining Family R=159 / 26 ( RS Elements: 1318, Using 100 )
+ -- Refining Family R=691 / 27 ( RS Elements: 1263, Using 100 )
+ -- Refining Family R=717 / 28 ( RS Elements: 1220, Using 100 )
+ -- Refining Family R=515 / 29 ( RS Elements: 1163, Using 100 )
+ -- Refining Family R=632 / 30 ( RS Elements: 1152, Using 100 )
+ -- Refining Family R=752 / 31 ( RS Elements: 1101, Using 100 )
+ -- Refining Family R=460 / 32 ( RS Elements: 1085, Using 100 )
+ -- Refining Family R=121 / 33 ( RS Elements: 934, Using 100 )
+ -- Refining Family R=101 / 34 ( RS Elements: 927, Using 100 )
+ -- Refining Family R=754 / 35 ( RS Elements: 916, Using 100 )
+ -- Refining Family R=981 / 36 ( RS Elements: 911, Using 100 )
+ -- Refining Family R=312 / 37 ( RS Elements: 910, Using 100 )
+ -- Refining Family R=589 / 38 ( RS Elements: 823, Using 100 )
+ -- Refining Family R=805 / 39 ( RS Elements: 816, Using 100 )
+ -- Refining Family R=346 / 40 ( RS Elements: 760, Using 100 )
+ -- Refining Family R=640 / 41 ( RS Elements: 735, Using 100 )
+ -- Refining Family R=409 / 42 ( RS Elements: 724, Using 100 )
+ -- Refining Family R=314 / 43 ( RS Elements: 724, Using 100 )
+ -- Refining Family R=94 / 44 ( RS Elements: 715, Using 100 )
+ -- Refining Family R=436 / 45 ( RS Elements: 681, Using 100 )
+ -- Refining Family R=612 / 46 ( RS Elements: 681, Using 100 )
+ -- Refining Family R=80 / 47 ( RS Elements: 678, Using 100 )
+ -- Refining Family R=1 / 48 ( RS Elements: 678, Using 100 )
+ -- Refining Family R=479 / 49 ( RS Elements: 670, Using 100 )
+ -- Refining Family R=166 / 50 ( RS Elements: 665, Using 100 )
+ -- Refining Family R=21 / 51 ( RS Elements: 652, Using 100 )
+ -- Refining Family R=276 / 52 ( RS Elements: 617, Using 100 )
+ -- Refining Family R=179 / 53 ( RS Elements: 610, Using 100 )
+ -- Refining Family R=235 / 54 ( RS Elements: 604, Using 100 )
+ -- Refining Family R=65 / 55 ( RS Elements: 596, Using 100 )
+ -- Refining Family R=339 / 56 ( RS Elements: 578, Using 100 )
+ -- Refining Family R=266 / 57 ( RS Elements: 566, Using 100 )
+ -- Refining Family R=250 / 58 ( RS Elements: 561, Using 100 )
+ -- Refining Family R=170 / 59 ( RS Elements: 546, Using 100 )
+ -- Refining Family R=215 / 60 ( RS Elements: 545, Using 100 )
+ -- Refining Family R=248 / 61 ( RS Elements: 531, Using 100 )
+ -- Refining Family R=1794 / 62 ( RS Elements: 530, Using 100 )
+ -- Refining Family R=402 / 63 ( RS Elements: 529, Using 100 )
+ -- Refining Family R=1252 / 64 ( RS Elements: 529, Using 100 )
+ -- Refining Family R=82 / 65 ( RS Elements: 526, Using 100 )
+ -- Refining Family R=693 / 66 ( RS Elements: 525, Using 100 )
+ -- Refining Family R=1202 / 67 ( RS Elements: 524, Using 100 )
+ -- Refining Family R=71 / 68 ( RS Elements: 516, Using 100 )
+ -- Refining Family R=164 / 69 ( RS Elements: 513, Using 100 )
+ -- Refining Family R=767 / 70 ( RS Elements: 510, Using 100 )
+ -- Refining Family R=10 / 71 ( RS Elements: 493, Using 100 )
+ -- Refining Family R=586 / 72 ( RS Elements: 489, Using 100 )
+ -- Refining Family R=417 / 73 ( RS Elements: 486, Using 100 )
+ -- Refining Family R=55 / 74 ( RS Elements: 482, Using 100 )
+ -- Refining Family R=359 / 75 ( RS Elements: 477, Using 100 )
+ -- Refining Family R=173 / 76 ( RS Elements: 477, Using 100 )
+ -- Refining Family R=1089 / 77 ( RS Elements: 475, Using 100 )
+ -- Refining Family R=751 / 78 ( RS Elements: 466, Using 100 )
+ -- Refining Family R=269 / 79 ( RS Elements: 460, Using 100 )
+ -- Refining Family R=677 / 80 ( RS Elements: 460, Using 100 )
+ -- Refining Family R=306 / 81 ( RS Elements: 455, Using 100 )
+ -- Refining Family R=408 / 82 ( RS Elements: 452, Using 100 )
+ -- Refining Family R=264 / 83 ( RS Elements: 446, Using 100 )
+ -- Refining Family R=19 / 84 ( RS Elements: 446, Using 100 )
+ -- Refining Family R=399 / 85 ( RS Elements: 441, Using 100 )
+ -- Refining Family R=42 / 86 ( RS Elements: 436, Using 100 )
+ -- Refining Family R=7 / 87 ( RS Elements: 435, Using 100 )
+ -- Refining Family R=946 / 88 ( RS Elements: 433, Using 100 )
+ -- Refining Family R=1269 / 89 ( RS Elements: 433, Using 100 )
+ -- Refining Family R=1025 / 90 ( RS Elements: 432, Using 100 )
+ -- Refining Family R=74 / 91 ( RS Elements: 424, Using 100 )
+ -- Refining Family R=25 / 92 ( RS Elements: 412, Using 100 )
+ -- Refining Family R=84 / 93 ( RS Elements: 411, Using 100 )
+ -- Refining Family R=1014 / 94 ( RS Elements: 404, Using 100 )
+ -- Refining Family R=367 / 95 ( RS Elements: 400, Using 100 )
+ -- Refining Family R=218 / 96 ( RS Elements: 388, Using 100 )
+ -- Refining Family R=796 / 97 ( RS Elements: 388, Using 100 )
+ -- Refining Family R=111 / 98 ( RS Elements: 386, Using 100 )
+ -- Refining Family R=35 / 99 ( RS Elements: 378, Using 100 )
+ -- Refining Family R=613 / 100 ( RS Elements: 376, Using 100 )
+ -- Refining Family R=211 / 101 ( RS Elements: 367, Using 100 )
+ -- Refining Family R=960 / 102 ( RS Elements: 364, Using 100 )
+ -- Refining Family R=294 / 103 ( RS Elements: 360, Using 100 )
+ -- Refining Family R=143 / 104 ( RS Elements: 355, Using 100 )
+ -- Refining Family R=281 / 105 ( RS Elements: 352, Using 100 )
+ -- Refining Family R=757 / 106 ( RS Elements: 351, Using 100 )
+ -- Refining Family R=304 / 107 ( RS Elements: 348, Using 100 )
+ -- Refining Family R=33 / 108 ( RS Elements: 345, Using 100 )
+ -- Refining Family R=541 / 109 ( RS Elements: 344, Using 100 )
+ -- Refining Family R=884 / 110 ( RS Elements: 341, Using 100 )
+ -- Refining Family R=76 / 111 ( RS Elements: 333, Using 100 )
+ -- Refining Family R=1381 / 112 ( RS Elements: 332, Using 100 )
+ -- Refining Family R=1989 / 113 ( RS Elements: 327, Using 100 )
+ -- Refining Family R=894 / 114 ( RS Elements: 324, Using 100 )
+ -- Refining Family R=287 / 115 ( RS Elements: 319, Using 100 )
+ -- Refining Family R=1023 / 116 ( RS Elements: 315, Using 100 )
+ -- Refining Family R=465 / 117 ( RS Elements: 315, Using 100 )
+ -- Refining Family R=502 / 118 ( RS Elements: 312, Using 100 )
+ -- Refining Family R=804 / 119 ( RS Elements: 307, Using 100 )
+ -- Refining Family R=464 / 120 ( RS Elements: 307, Using 100 )
+ -- Refining Family R=355 / 121 ( RS Elements: 306, Using 100 )
+ -- Refining Family R=791 / 122 ( RS Elements: 304, Using 100 )
+ -- Refining Family R=394 / 123 ( RS Elements: 302, Using 100 )
+ -- Refining Family R=723 / 124 ( RS Elements: 298, Using 100 )
+ -- Refining Family R=1124 / 125 ( RS Elements: 297, Using 100 )
+ -- Refining Family R=201 / 126 ( RS Elements: 295, Using 100 )
+ -- Refining Family R=419 / 127 ( RS Elements: 294, Using 100 )
+ -- Refining Family R=787 / 128 ( RS Elements: 292, Using 100 )
+ -- Refining Family R=1004 / 129 ( RS Elements: 287, Using 100 )
+ -- Refining Family R=207 / 130 ( RS Elements: 287, Using 100 )
+ -- Refining Family R=1074 / 131 ( RS Elements: 284, Using 100 )
+ -- Refining Family R=154 / 132 ( RS Elements: 283, Using 100 )
+ -- Refining Family R=620 / 133 ( RS Elements: 280, Using 100 )
+ -- Refining Family R=978 / 134 ( RS Elements: 277, Using 100 )
+ -- Refining Family R=768 / 135 ( RS Elements: 276, Using 100 )
+ -- Refining Family R=291 / 136 ( RS Elements: 276, Using 100 )
+ -- Refining Family R=1405 / 137 ( RS Elements: 270, Using 100 )
+ -- Refining Family R=592 / 138 ( RS Elements: 269, Using 100 )
+ -- Refining Family R=871 / 139 ( RS Elements: 267, Using 100 )
+ -- Refining Family R=87 / 140 ( RS Elements: 266, Using 100 )
+ -- Refining Family R=1383 / 141 ( RS Elements: 266, Using 100 )
+ -- Refining Family R=366 / 142 ( RS Elements: 264, Using 100 )
+ -- Refining Family R=320 / 143 ( RS Elements: 263, Using 100 )
+ -- Refining Family R=331 / 144 ( RS Elements: 262, Using 100 )
+ -- Refining Family R=204 / 145 ( RS Elements: 262, Using 100 )
+ -- Refining Family R=1260 / 146 ( RS Elements: 262, Using 100 )
+ -- Refining Family R=321 / 147 ( RS Elements: 260, Using 100 )
+ -- Refining Family R=498 / 148 ( RS Elements: 256, Using 100 )
+ -- Refining Family R=220 / 149 ( RS Elements: 251, Using 100 )
+ -- Refining Family R=50 / 150 ( RS Elements: 250, Using 100 )
+ -- Refining Family R=746 / 151 ( RS Elements: 247, Using 100 )
+ -- Refining Family R=1140 / 152 ( RS Elements: 247, Using 100 )
+ -- Refining Family R=749 / 153 ( RS Elements: 240, Using 100 )
+ -- Refining Family R=910 / 154 ( RS Elements: 240, Using 100 )
+ -- Refining Family R=57 / 155 ( RS Elements: 238, Using 100 )
+ -- Refining Family R=1360 / 156 ( RS Elements: 238, Using 100 )
+ -- Refining Family R=1335 / 157 ( RS Elements: 236, Using 100 )
+ -- Refining Family R=988 / 158 ( RS Elements: 235, Using 100 )
+ -- Refining Family R=214 / 159 ( RS Elements: 233, Using 100 )
+ -- Refining Family R=1071 / 160 ( RS Elements: 232, Using 100 )
+ -- Refining Family R=348 / 161 ( RS Elements: 232, Using 100 )
+ -- Refining Family R=1130 / 162 ( RS Elements: 232, Using 100 )
+ -- Refining Family R=1223 / 163 ( RS Elements: 231, Using 100 )
+ -- Refining Family R=247 / 164 ( RS Elements: 230, Using 100 )
+ -- Refining Family R=1649 / 165 ( RS Elements: 229, Using 100 )
+ -- Refining Family R=819 / 166 ( RS Elements: 228, Using 100 )
+ -- Refining Family R=888 / 167 ( RS Elements: 228, Using 100 )
+ -- Refining Family R=444 / 168 ( RS Elements: 228, Using 100 )
+ -- Refining Family R=1304 / 169 ( RS Elements: 227, Using 100 )
+ -- Refining Family R=85 / 170 ( RS Elements: 218, Using 100 )
+ -- Refining Family R=1397 / 171 ( RS Elements: 218, Using 100 )
+ -- Refining Family R=1318 / 172 ( RS Elements: 217, Using 100 )
+ -- Refining Family R=386 / 173 ( RS Elements: 214, Using 100 )
+ -- Refining Family R=318 / 174 ( RS Elements: 209, Using 100 )
+ -- Refining Family R=906 / 175 ( RS Elements: 208, Using 100 )
+ -- Refining Family R=471 / 176 ( RS Elements: 208, Using 100 )
+ -- Refining Family R=748 / 177 ( RS Elements: 207, Using 100 )
+ -- Refining Family R=1204 / 178 ( RS Elements: 206, Using 100 )
+ -- Refining Family R=597 / 179 ( RS Elements: 204, Using 100 )
+ -- Refining Family R=38 / 180 ( RS Elements: 204, Using 100 )
+ -- Refining Family R=968 / 181 ( RS Elements: 198, Using 100 )
+ -- Refining Family R=1020 / 182 ( RS Elements: 188, Using 100 )
+ -- Refining Family R=157 / 183 ( RS Elements: 188, Using 100 )
+ -- Refining Family R=2888 / 184 ( RS Elements: 187, Using 100 )
+ -- Refining Family R=165 / 185 ( RS Elements: 184, Using 100 )
+ -- Refining Family R=290 / 186 ( RS Elements: 184, Using 100 )
+ -- Refining Family R=726 / 187 ( RS Elements: 182, Using 100 )
+ -- Refining Family R=667 / 188 ( RS Elements: 182, Using 100 )
+ -- Refining Family R=550 / 189 ( RS Elements: 181, Using 100 )
+ -- Refining Family R=369 / 190 ( RS Elements: 177, Using 100 )
+ -- Refining Family R=554 / 191 ( RS Elements: 170, Using 100 )
+ -- Refining Family R=508 / 192 ( RS Elements: 169, Using 100 )
+ -- Refining Family R=400 / 193 ( RS Elements: 168, Using 100 )
+ -- Refining Family R=638 / 194 ( RS Elements: 161, Using 100 )
+ -- Refining Family R=335 / 195 ( RS Elements: 157, Using 100 )
+ -- Refining Family R=315 / 196 ( RS Elements: 155, Using 100 )
+ -- Refining Family R=497 / 197 ( RS Elements: 155, Using 100 )
+ -- Refining Family R=1116 / 198 ( RS Elements: 154, Using 100 )
+ -- Refining Family R=1245 / 199 ( RS Elements: 153, Using 100 )
+ -- Refining Family R=850 / 200 ( RS Elements: 149, Using 100 )
+ -- Refining Family R=68 / 201 ( RS Elements: 148, Using 100 )
+ -- Refining Family R=132 / 202 ( RS Elements: 148, Using 100 )
+ -- Refining Family R=1639 / 203 ( RS Elements: 144, Using 100 )
+ -- Refining Family R=1028 / 204 ( RS Elements: 143, Using 100 )
+ -- Refining Family R=197 / 205 ( RS Elements: 142, Using 100 )
+ -- Refining Family R=138 / 206 ( RS Elements: 142, Using 100 )
+ -- Refining Family R=1006 / 207 ( RS Elements: 142, Using 100 )
+ -- Refining Family R=1165 / 208 ( RS Elements: 138, Using 100 )
+ -- Refining Family R=302 / 209 ( RS Elements: 138, Using 100 )
+ -- Refining Family R=761 / 210 ( RS Elements: 138, Using 100 )
+ -- Refining Family R=49 / 211 ( RS Elements: 134, Using 100 )
+ -- Refining Family R=1111 / 212 ( RS Elements: 133, Using 100 )
+ -- Refining Family R=543 / 213 ( RS Elements: 133, Using 100 )
+ -- Refining Family R=481 / 214 ( RS Elements: 131, Using 100 )
+ -- Refining Family R=583 / 215 ( RS Elements: 131, Using 100 )
+ -- Refining Family R=1175 / 216 ( RS Elements: 129, Using 100 )
+ -- Refining Family R=456 / 217 ( RS Elements: 127, Using 100 )
+ -- Refining Family R=113 / 218 ( RS Elements: 127, Using 100 )
+ -- Refining Family R=2384 / 219 ( RS Elements: 127, Using 100 )
+ -- Refining Family R=568 / 220 ( RS Elements: 126, Using 100 )
+ -- Refining Family R=1210 / 221 ( RS Elements: 124, Using 100 )
+ -- Refining Family R=459 / 222 ( RS Elements: 119, Using 100 )
+ -- Refining Family R=194 / 223 ( RS Elements: 119, Using 100 )
+ -- Refining Family R=427 / 224 ( RS Elements: 118, Using 100 )
+ -- Refining Family R=322 / 225 ( RS Elements: 116, Using 100 )
+ -- Refining Family R=192 / 226 ( RS Elements: 116, Using 100 )
+ -- Refining Family R=553 / 227 ( RS Elements: 116, Using 100 )
+ -- Refining Family R=654 / 228 ( RS Elements: 116, Using 100 )
+ -- Refining Family R=781 / 229 ( RS Elements: 115, Using 100 )
+ -- Refining Family R=221 / 230 ( RS Elements: 113, Using 100 )
+ -- Refining Family R=542 / 231 ( RS Elements: 113, Using 100 )
+ -- Refining Family R=705 / 232 ( RS Elements: 113, Using 100 )
+ -- Refining Family R=223 / 233 ( RS Elements: 112, Using 100 )
+ -- Refining Family R=733 / 234 ( RS Elements: 112, Using 100 )
+ -- Refining Family R=229 / 235 ( RS Elements: 110, Using 100 )
+ -- Refining Family R=995 / 236 ( RS Elements: 110, Using 100 )
+ -- Refining Family R=983 / 237 ( RS Elements: 110, Using 100 )
+ -- Refining Family R=172 / 238 ( RS Elements: 110, Using 100 )
+ -- Refining Family R=153 / 239 ( RS Elements: 108, Using 100 )
+ -- Refining Family R=293 / 240 ( RS Elements: 108, Using 100 )
+ -- Refining Family R=815 / 241 ( RS Elements: 106, Using 100 )
+ -- Refining Family R=272 / 242 ( RS Elements: 106, Using 100 )
+ -- Refining Family R=1162 / 243 ( RS Elements: 106, Using 100 )
+sh: line 1: 12845 Segmentation fault      (core dumped) /sw/bioinfo/RepeatMasker/aux_rackham/rmblast/rmblast-2.10.0/bin/rmblastn -num_alignments 9999999 -db /domus/h1/leizhao/Genome_Analysis/code/RM_52809.ThuMay111410592023/round-1/family-243.fa -query /domus/h1/leizhao/Genome_Analysis/code/RM_52809.ThuMay111410592023/round-1/family-243.fa -gapopen 20 -gapextend 5 -complexity_adjust -word_size 7 -xdrop_ungap 300 -xdrop_gap_final 150 -xdrop_gap 75 -min_raw_gapped_score 150 -dust no -num_threads 4 -matrix comparison.matrix 2> /domus/h1/leizhao/Genome_Analysis/code/RM_52809.ThuMay111410592023/round-1/ncResults-1683823736-12835.err
+
+ERROR from search engine (0) 
+Can't call method "getNumAlignedSeqs" on an undefined value at /sw/bioinfo/RepeatModeler/2.0.3/rackham/Refiner line 839.
+RepeatModeler: Could not open refined model /domus/h1/leizhao/Genome_Analysis/code/RM_52809.ThuMay111410592023/round-1/family-243.fa.refiner_cons!
++ RepeatMasker -pa 4 -xsmall -lib mySpecies-families.fa -dir /proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking /home/leizhao/Genome_Analysis/results/04_Pilon_DNA_assembly_polish/DNA_assembly_polish_Pilon.fasta
+RepeatMasker version 4.1.2-p1
+Search Engine: NCBI/RMBLAST [ 2.11.0+ ]
+RepeatMasker::setspecies: Could not find user specified library mySpecies-families.fa, or the file is empty.

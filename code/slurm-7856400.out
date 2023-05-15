@@ -1,0 +1,89 @@
+	STAR --runThreadN 8 --runMode genomeGenerate --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --genomeFastaFiles /proj/genomeanalysis2023/nobackup/work/leizhao/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:13:06 ..... started STAR run
+!!!!! WARNING: Could not move Log.out file from ./Log.out into /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/Log.out. Will keep ./Log.out
+
+May 11 22:13:06 ... starting to generate Genome files
+!!!!! WARNING: --genomeSAindexNbases 14 is too large for the genome size=36814643, which may cause seg-fault at the mapping step. Re-run genome generation with recommended --genomeSAindexNbases 11
+May 11 22:13:12 ... starting to sort Suffix Array. This may take a long time...
+May 11 22:13:13 ... sorting Suffix Array chunks and saving them to disk...
+May 11 22:13:21 ... loading chunks from disk, packing SA...
+May 11 22:13:22 ... finished generating suffix array
+May 11 22:13:22 ... generating Suffix Array index
+May 11 22:13:37 ... completed Suffix Array index
+May 11 22:13:37 ... writing Genome to disk ...
+May 11 22:13:37 ... writing Suffix Array to disk ...
+May 11 22:13:37 ... writing SAindex to disk
+May 11 22:13:40 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/results/08_Trimmomatic_RNA_trimming/RNA_trimmed_1P.fq.gz /home/leizhao/Genome_Analysis/results/08_Trimmomatic_RNA_trimming/RNA_trimmed_2P.fq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6040095_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:13:40 ..... started STAR run
+May 11 22:13:40 ..... loading genome
+May 11 22:13:42 ..... started mapping
+May 11 22:14:21 ..... finished mapping
+May 11 22:14:22 ..... started sorting BAM
+May 11 22:14:28 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040092_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040092_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6040092_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:14:30 ..... started STAR run
+May 11 22:14:30 ..... loading genome
+May 11 22:14:32 ..... started mapping
+May 11 22:15:02 ..... finished mapping
+May 11 22:15:03 ..... started sorting BAM
+May 11 22:15:07 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040093_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040093_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6040093_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:15:09 ..... started STAR run
+May 11 22:15:09 ..... loading genome
+May 11 22:15:11 ..... started mapping
+May 11 22:15:36 ..... finished mapping
+May 11 22:15:37 ..... started sorting BAM
+May 11 22:15:40 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040094_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040094_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6040094_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:15:41 ..... started STAR run
+May 11 22:15:42 ..... loading genome
+May 11 22:15:43 ..... started mapping
+May 11 22:16:21 ..... finished mapping
+May 11 22:16:21 ..... started sorting BAM
+May 11 22:16:28 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040096_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040096_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6040096_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:16:30 ..... started STAR run
+May 11 22:16:30 ..... loading genome
+May 11 22:16:31 ..... started mapping
+May 11 22:17:07 ..... finished mapping
+May 11 22:17:08 ..... started sorting BAM
+May 11 22:17:14 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040097_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6040097_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6040097_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:17:15 ..... started STAR run
+May 11 22:17:15 ..... loading genome
+May 11 22:17:16 ..... started mapping
+May 11 22:17:49 ..... finished mapping
+May 11 22:17:49 ..... started sorting BAM
+May 11 22:17:53 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6156066_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6156066_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6156066_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:17:54 ..... started STAR run
+May 11 22:17:54 ..... loading genome
+May 11 22:17:56 ..... started mapping
+May 11 22:18:27 ..... finished mapping
+May 11 22:18:27 ..... started sorting BAM
+May 11 22:18:31 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6156067_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6156067_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6156067_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:18:32 ..... started STAR run
+May 11 22:18:33 ..... loading genome
+May 11 22:18:35 ..... started mapping
+May 11 22:19:12 ..... finished mapping
+May 11 22:19:13 ..... started sorting BAM
+May 11 22:19:17 ..... finished successfully
+	STAR --runThreadN 8 --genomeDir /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping --readFilesIn /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6156069_scaffold_06.1.fastq.gz /home/leizhao/Genome_Analysis/data/raw_data/transcriptome/trimmed/SRR6156069_scaffold_06.2.fastq.gz --readFilesCommand zcat --outFileNamePrefix /proj/genomeanalysis2023/nobackup/work/leizhao/10_STAR_RNA_mapping/SRR6156069_06_ --outSAMtype BAM SortedByCoordinate
+	STAR version: 2.7.9a   compiled: 2021-10-20T18:01:41+0200 rackham5.uppmax.uu.se:/sw/bioinfo/star/2.7.9a/src/STAR-2.7.9a/source
+May 11 22:19:18 ..... started STAR run
+May 11 22:19:18 ..... loading genome
+May 11 22:19:20 ..... started mapping
+May 11 22:19:56 ..... finished mapping
+May 11 22:19:57 ..... started sorting BAM
+May 11 22:20:01 ..... finished successfully

@@ -1,0 +1,188 @@
++ cat /var/spool/slurmd/job7852415/slurm_script
+#!/bin/bash -l
+#SBATCH -A uppmax2023-2-8
+#SBATCH -M snowy
+#SBATCH -p core
+#SBATCH -n 1
+#SBATCH -t 01:00:00
+#SBATCH -J DNA_assembly_evaluation
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user lei.zhao.1300@student.uu.se
+
+set -x
+cat $0
+echo USER = $USER
+echo QOS = $SLURM_JOB_QOS
+
+module load bioinfo-tools quast
+
+quast.py \
+-o /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking \
+-r /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/reference_scaffold_06.fasta \
+--eukaryote \
+/home/leizhao/Genome_Analysis/results/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked
+
+
+
++ echo USER = leizhao
+USER = leizhao
++ echo QOS = normal
+QOS = normal
++ module load bioinfo-tools quast
+++ /usr/share/lmod/lmod/libexec/lmod bash load bioinfo-tools quast
++ eval '__LMOD_REF_COUNT_LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:1;' export '__LMOD_REF_COUNT_LD_LIBRARY_PATH;' 'LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib;' export 'LD_LIBRARY_PATH;' '__LMOD_REF_COUNT_LOADEDMODULES=uppmax:2\;bioinfo-tools:1\;python/3.7.2:1\;quast/5.0.2:1;' export '__LMOD_REF_COUNT_LOADEDMODULES;' 'LOADEDMODULES=uppmax:bioinfo-tools:python/3.7.2:quast/5.0.2;' export 'LOADEDMODULES;' '__LMOD_REF_COUNT_MANPATH=/sw/comp/python/3.7.2_snowy/share/man:1\;/usr/share/man:2\;/sw/uppmax/man:2\;/opt/thinlinc/share/man:2;' export '__LMOD_REF_COUNT_MANPATH;' 'MANPATH=/sw/comp/python/3.7.2_snowy/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man;' export 'MANPATH;' '__LMOD_REF_COUNT_MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:1\;/sw/mf/snowy/bioinfo-tools/alignment:1\;/sw/mf/snowy/bioinfo-tools/assembly:1\;/sw/mf/snowy/bioinfo-tools/misc:1\;/sw/mf/snowy/bioinfo-tools/phylogeny:1\;/sw/mf/snowy/bioinfo-tools/pipelines:1\;/sw/mf/snowy/bioinfo-tools/sw_collections:1\;/sw/mf/snowy/applications:1\;/sw/mf/snowy/build-tools:1\;/sw/mf/snowy/compilers:1\;/sw/mf/snowy/data:1\;/sw/mf/snowy/environment:1\;/sw/mf/snowy/libraries:1\;/sw/mf/snowy/parallel:1;' export '__LMOD_REF_COUNT_MODULEPATH;' 'MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel;' export 'MODULEPATH;' '__LMOD_REF_COUNT_PATH=/sw/bioinfo/quast/5.0.2/snowy/bin:1\;/sw/comp/python/3.7.2_snowy/bin:1\;/home/leizhao/bin:2\;/usr/lib64/qt-3.3/bin:1\;/usr/local/bin:1\;/usr/bin:1\;/usr/local/sbin:1\;/usr/sbin:1\;/opt/thinlinc/bin:1\;/sw/uppmax/bin:2;' export '__LMOD_REF_COUNT_PATH;' 'PATH=/sw/bioinfo/quast/5.0.2/snowy/bin:/sw/comp/python/3.7.2_snowy/bin:/home/leizhao/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin;' export 'PATH;' '__LMOD_REF_COUNT_PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig:1;' export '__LMOD_REF_COUNT_PKG_CONFIG_PATH;' 'PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig;' export 'PKG_CONFIG_PATH;' '__LMOD_REF_COUNT_PYTHONPATH=/sw/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages:1;' export '__LMOD_REF_COUNT_PYTHONPATH;' 'PYTHONPATH=/sw/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages;' export 'PYTHONPATH;' 'PYTHON_ROOT=/sw/comp/python/3.7.2_snowy;' export 'PYTHON_ROOT;' '__LMOD_REF_COUNT__LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:1\;/sw/mf/snowy/compilers/python/3.7.2:1\;/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2:1;' export '__LMOD_REF_COUNT__LMFILES_;' '_LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/compilers/python/3.7.2:/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2;' export '_LMFILES_;' '_ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxweXRob249e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9weXRob24vMy43LjIiLFsiZnVsbE5hbWUiXT0icHl0aG9uLzMuNy4yIixbImxvYWRPcmRlciJd;' export '_ModuleTable001_;' '_ModuleTable002_=PTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHl0aG9uLzMuNy4yIix9LHF1YXN0PXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvcXVhc3QvNS4wLjIiLFsiZnVsbE5hbWUiXT0icXVhc3QvNS4wLjIiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJxdWFzdCIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9t;' export '_ModuleTable002_;' '_ModuleTable003_=Zi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nu;' export '_ModuleTable003_;' '_ModuleTable004_=b3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9;' export '_ModuleTable004_;' '_ModuleTable_Sz_=4;' export '_ModuleTable_Sz_;'
+++ __LMOD_REF_COUNT_LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib:1
+++ export __LMOD_REF_COUNT_LD_LIBRARY_PATH
+++ LD_LIBRARY_PATH=/sw/libs/wxWidgets/lib
+++ export LD_LIBRARY_PATH
+++ __LMOD_REF_COUNT_LOADEDMODULES='uppmax:2;bioinfo-tools:1;python/3.7.2:1;quast/5.0.2:1'
+++ export __LMOD_REF_COUNT_LOADEDMODULES
+++ LOADEDMODULES=uppmax:bioinfo-tools:python/3.7.2:quast/5.0.2
+++ export LOADEDMODULES
+++ __LMOD_REF_COUNT_MANPATH='/sw/comp/python/3.7.2_snowy/share/man:1;/usr/share/man:2;/sw/uppmax/man:2;/opt/thinlinc/share/man:2'
+++ export __LMOD_REF_COUNT_MANPATH
+++ MANPATH=/sw/comp/python/3.7.2_snowy/share/man:/usr/share/man:/sw/uppmax/man:/opt/thinlinc/share/man
+++ export MANPATH
+++ __LMOD_REF_COUNT_MODULEPATH='/sw/mf/snowy/bioinfo-tools/annotation:1;/sw/mf/snowy/bioinfo-tools/alignment:1;/sw/mf/snowy/bioinfo-tools/assembly:1;/sw/mf/snowy/bioinfo-tools/misc:1;/sw/mf/snowy/bioinfo-tools/phylogeny:1;/sw/mf/snowy/bioinfo-tools/pipelines:1;/sw/mf/snowy/bioinfo-tools/sw_collections:1;/sw/mf/snowy/applications:1;/sw/mf/snowy/build-tools:1;/sw/mf/snowy/compilers:1;/sw/mf/snowy/data:1;/sw/mf/snowy/environment:1;/sw/mf/snowy/libraries:1;/sw/mf/snowy/parallel:1'
+++ export __LMOD_REF_COUNT_MODULEPATH
+++ MODULEPATH=/sw/mf/snowy/bioinfo-tools/annotation:/sw/mf/snowy/bioinfo-tools/alignment:/sw/mf/snowy/bioinfo-tools/assembly:/sw/mf/snowy/bioinfo-tools/misc:/sw/mf/snowy/bioinfo-tools/phylogeny:/sw/mf/snowy/bioinfo-tools/pipelines:/sw/mf/snowy/bioinfo-tools/sw_collections:/sw/mf/snowy/applications:/sw/mf/snowy/build-tools:/sw/mf/snowy/compilers:/sw/mf/snowy/data:/sw/mf/snowy/environment:/sw/mf/snowy/libraries:/sw/mf/snowy/parallel
+++ export MODULEPATH
+++ __LMOD_REF_COUNT_PATH='/sw/bioinfo/quast/5.0.2/snowy/bin:1;/sw/comp/python/3.7.2_snowy/bin:1;/home/leizhao/bin:2;/usr/lib64/qt-3.3/bin:1;/usr/local/bin:1;/usr/bin:1;/usr/local/sbin:1;/usr/sbin:1;/opt/thinlinc/bin:1;/sw/uppmax/bin:2'
+++ export __LMOD_REF_COUNT_PATH
+++ PATH=/sw/bioinfo/quast/5.0.2/snowy/bin:/sw/comp/python/3.7.2_snowy/bin:/home/leizhao/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/opt/thinlinc/bin:/sw/uppmax/bin
+++ export PATH
+++ __LMOD_REF_COUNT_PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig:1
+++ export __LMOD_REF_COUNT_PKG_CONFIG_PATH
+++ PKG_CONFIG_PATH=/sw/comp/python/3.7.2_snowy/lib/pkgconfig
+++ export PKG_CONFIG_PATH
+++ __LMOD_REF_COUNT_PYTHONPATH=/sw/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages:1
+++ export __LMOD_REF_COUNT_PYTHONPATH
+++ PYTHONPATH=/sw/bioinfo/quast/5.0.2/snowy/lib/python3.7/site-packages
+++ export PYTHONPATH
+++ PYTHON_ROOT=/sw/comp/python/3.7.2_snowy
+++ export PYTHON_ROOT
+++ __LMOD_REF_COUNT__LMFILES_='/sw/mf/snowy/environment/bioinfo-tools:1;/sw/mf/snowy/compilers/python/3.7.2:1;/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2:1'
+++ export __LMOD_REF_COUNT__LMFILES_
+++ _LMFILES_=/sw/mf/snowy/environment/bioinfo-tools:/sw/mf/snowy/compilers/python/3.7.2:/sw/mf/snowy/bioinfo-tools/misc/quast/5.0.2
+++ export _LMFILES_
+++ _ModuleTable001_=X01vZHVsZVRhYmxlXz17WyJNVHZlcnNpb24iXT0zLFsiY19yZWJ1aWxkVGltZSJdPWZhbHNlLFsiY19zaG9ydFRpbWUiXT1mYWxzZSxkZXB0aFQ9e30sZmFtaWx5PXt9LG1UPXtbImJpb2luZm8tdG9vbHMiXT17WyJmbiJdPSIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQvYmlvaW5mby10b29scyIsWyJmdWxsTmFtZSJdPSJiaW9pbmZvLXRvb2xzIixbImxvYWRPcmRlciJdPTEscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MCxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0iYmlvaW5mby10b29scyIsfSxweXRob249e1siZm4iXT0iL3N3L21mL3Nub3d5L2NvbXBpbGVycy9weXRob24vMy43LjIiLFsiZnVsbE5hbWUiXT0icHl0aG9uLzMuNy4yIixbImxvYWRPcmRlciJd
+++ export _ModuleTable001_
+++ _ModuleTable002_=PTIscHJvcFQ9e30sWyJzdGFja0RlcHRoIl09MSxbInN0YXR1cyJdPSJhY3RpdmUiLFsidXNlck5hbWUiXT0icHl0aG9uLzMuNy4yIix9LHF1YXN0PXtbImZuIl09Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MvcXVhc3QvNS4wLjIiLFsiZnVsbE5hbWUiXT0icXVhc3QvNS4wLjIiLFsibG9hZE9yZGVyIl09Myxwcm9wVD17fSxbInN0YWNrRGVwdGgiXT0wLFsic3RhdHVzIl09ImFjdGl2ZSIsWyJ1c2VyTmFtZSJdPSJxdWFzdCIsfSx9LG1wYXRoQT17Ii9zdy9tZi9zbm93eS9iaW9pbmZvLXRvb2xzL2Fubm90YXRpb24iLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hbGlnbm1lbnQiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9hc3NlbWJseSIsIi9zdy9t
+++ export _ModuleTable002_
+++ _ModuleTable003_=Zi9zbm93eS9iaW9pbmZvLXRvb2xzL21pc2MiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waHlsb2dlbnkiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9waXBlbGluZXMiLCIvc3cvbWYvc25vd3kvYmlvaW5mby10b29scy9zd19jb2xsZWN0aW9ucyIsIi9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnMiLCIvc3cvbWYvc25vd3kvYnVpbGQtdG9vbHMiLCIvc3cvbWYvc25vd3kvY29tcGlsZXJzIiwiL3N3L21mL3Nub3d5L2RhdGEiLCIvc3cvbWYvc25vd3kvZW52aXJvbm1lbnQiLCIvc3cvbWYvc25vd3kvbGlicmFyaWVzIiwiL3N3L21mL3Nub3d5L3BhcmFsbGVsIix9LFsic3lzdGVtQmFzZU1QQVRIIl09Ii9zdy9tZi9zbm93eS9hcHBsaWNhdGlvbnM6L3N3L21mL3Nu
+++ export _ModuleTable003_
+++ _ModuleTable004_=b3d5L2J1aWxkLXRvb2xzOi9zdy9tZi9zbm93eS9jb21waWxlcnM6L3N3L21mL3Nub3d5L2RhdGE6L3N3L21mL3Nub3d5L2Vudmlyb25tZW50Oi9zdy9tZi9zbm93eS9saWJyYXJpZXM6L3N3L21mL3Nub3d5L3BhcmFsbGVsIix9
+++ export _ModuleTable004_
+++ _ModuleTable_Sz_=4
+++ export _ModuleTable_Sz_
+++ : -s sh
++ eval
++ quast.py -o /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking -r /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/reference_scaffold_06.fasta --eukaryote /home/leizhao/Genome_Analysis/results/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked
+/sw/bioinfo/quast/5.0.2/snowy/bin/quast.py -o /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking -r /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/reference_scaffold_06.fasta --eukaryote /home/leizhao/Genome_Analysis/results/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-3.10.0-1160.88.1.el7.x86_64-x86_64-with-centos-7.9.2009-Core (linux_64)
+  Python version: 3.7.2
+  CPUs number: 16
+
+Started: 2023-05-10 13:59:31
+
+Logging to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/quast.log
+NOTICE: Maximum number of threads is set to 4 (use --threads option to set it manually)
+
+CWD: /domus/h1/leizhao/Genome_Analysis/code
+Main parameters: 
+  MODE: default, threads: 4, eukaryotic: true, minimum contig length: 500, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/reference_scaffold_06.fasta ==> reference_scaffold_06
+
+Contigs:
+  Pre-processing...
+  /home/leizhao/Genome_Analysis/results/06_RepeatMasker_DNA_assembly_masking/DNA_assembly_polish_Pilon.fasta.masked ==> DNA_assembly_polish_Pilon.fasta.masked
+
+2023-05-10 13:59:41
+Running Basic statistics processor...
+  Reference genome:
+    reference_scaffold_06.fasta, length = 26551601, num fragments = 1, GC % = 30.98
+  Contig files: 
+    DNA_assembly_polish_Pilon.fasta.masked
+  Calculating N50 and L50...
+    DNA_assembly_polish_Pilon.fasta.masked, N50 = 234577, L50 = 41, Total length = 36814643, GC % = 31.72, # N's per 100 kbp =  3721.35
+  Drawing Nx plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/basic_stats/GC_content_plot.pdf
+  Drawing DNA_assembly_polish_Pilon.fasta.masked GC content plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/basic_stats/DNA_assembly_polish_Pilon.fasta.masked_GC_content_plot.pdf
+Done.
+
+2023-05-10 13:59:49
+Running Contig analyzer...
+  DNA_assembly_polish_Pilon.fasta.masked
+  Logging to files /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/contigs_reports/contigs_report_DNA_assembly_polish_Pilon-fasta-masked.stdout and contigs_report_DNA_assembly_polish_Pilon-fasta-masked.stderr...
+  Aligning contigs to the reference
+  Analysis is finished.
+  Creating total report...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2023-05-10 14:00:25
+Running NA-NGA calculation...
+  DNA_assembly_polish_Pilon.fasta.masked, Largest alignment = 1246981, NA50 = 151661, NGA50 = 258030, LA50 = 54, LGA50 = 29
+  Drawing cumulative plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/aligned_stats/NGAx_plot.pdf
+Done.
+
+2023-05-10 14:00:28
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  DNA_assembly_polish_Pilon.fasta.masked
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2023-05-10 14:00:39
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2023-05-10 14:00:42
+RESULTS:
+  Text versions of total report are saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/report.html
+  PDF version (tables and plots) is saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/report.pdf
+  Icarus (contig browser) is saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/icarus.html
+  Log is saved to /home/leizhao/Genome_Analysis/results/05_Quast_DNA_assembly_evaluation/after_masking/quast.log
+
+Finished: 2023-05-10 14:00:42
+Elapsed time: 0:01:10.602295
+NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
